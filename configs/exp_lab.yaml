@@ -1,0 +1,3 @@
+experiment: "exp_lab"
+colorspace: "lab"
+# ... (même structure que RGB)

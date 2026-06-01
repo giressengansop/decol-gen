@@ -1,0 +1,3 @@
+experiment: "exp_hsv"
+colorspace: "hsv"
+# ... (même structure que RGB)

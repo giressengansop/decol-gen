@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "color-dg"
+version = "0.1.0"
+description = "Robust Representation Learning via Decorrelated Color Spaces for Clinical Domain Generalization"
+authors = [{name = "Giresse N'Jinkap", email = "gnjinkap@uni-bamberg.de"}]
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+
+dependencies = [
+    "numpy>=1.24",
+    "torch>=2.1",
+    "torchvision>=0.16",
+    "scikit-image>=0.21",
+    "opencv-python>=4.8",
+    "matplotlib>=3.7",
+    "seaborn>=0.12",
+    "pyyaml>=6.0",
+    "tqdm>=4.66",
+    "pandas>=2.0",
+    "wandb>=0.16",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "pytest-cov>=4.1",
+    "black>=23.0",
+    "flake8>=6.0",
+    "isort>=5.12",
+]
+
+notebook = [
+    "jupyter>=1.0",
+    "ipykernel>=6.25",
+    "jupyterlab>=4.0",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "--cov=src/color_dg --cov-report=html"
+
+[tool.black]
+line-length = 100
+target-version = ['py310']
+
+[tool.isort]
+profile = "black"
+line_length = 100
