@@ -1,7 +1,0 @@
-color_dg
-configs
-data
-docs
-notebooks
-results
-scripts
