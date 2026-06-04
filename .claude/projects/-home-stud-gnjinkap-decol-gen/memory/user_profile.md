@@ -5,9 +5,7 @@ metadata:
   type: user
 ---
 
-Giresse Ngansop, étudiant en Bachelor à l'Université de Bamberg.
+Giresse Ngansop, a Bachelor’s student at the University of Bamberg.
+- **Project**: Thesis on the comparison of colour spaces (RGB, HSV, CIELAB) for training ResNet-18 on CIFAR-10.
+- **Working style**: Gradual and structured learning; wants to understand each component before coding. Prefers to see the full plan before starting to code.
 
-- **Projet** : Thèse sur la comparaison des espaces couleur (RGB, HSV, CIELAB) pour l'entraînement de ResNet-18 sur CIFAR-10.
-- **Niveau PyTorch/deep learning** : Débutant — connaît Python mais peu d'expérience avec les réseaux de neurones.
-- **Préférence de travail** : Apprentissage progressif et organisé, veut comprendre chaque composant avant de coder. Préfère voir le plan complet avant de commencer à coder.
-- **Langue** : Communique en français.

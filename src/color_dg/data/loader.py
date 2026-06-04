@@ -1,43 +1,25 @@
-"""CIFAR-10 data loader"""
+"""CIFAR-10 data loaders with colorspace-aware transforms."""
 
 from torch.utils.data import DataLoader
-from torchvision import datasets, transforms
-from color_dg.color_spaces import ColorspaceTransform
+from torchvision import datasets
+from ..color_spaces.transforms import get_transforms
 
-def get_cifar10_loaders(colorspace: str = "rgb", batch_size: int = 32, num_workers: int = 4):
-    """Load CIFAR-10 dataset in specified color space"""
-    
-    transform = transforms.Compose([
-        transforms.ToTensor(),
-        ColorspaceTransform(colorspace=colorspace),
-    ])
-    
-    train_dataset = datasets.CIFAR10(
-        root='./data',
-        train=True,
-        download=True,
-        transform=transform
-    )
-    
-    test_dataset = datasets.CIFAR10(
-        root='./data',
-        train=False,
-        download=True,
-        transform=transform
-    )
-    
+def get_cifar10_loaders(
+    colorspace: str = "rgb",
+    batch_size: int = 128,
+    num_workers: int = 2,
+    data_root: str = "./data",
+):
     train_loader = DataLoader(
-        train_dataset,
-        batch_size=batch_size,
-        shuffle=True,
-        num_workers=num_workers
+        datasets.CIFAR10(root=data_root, train=True,  download=True,
+                         transform=get_transforms(colorspace, train=True)),
+        batch_size=batch_size, shuffle=True,  num_workers=num_workers, pin_memory=True,
     )
-    
     test_loader = DataLoader(
-        test_dataset,
-        batch_size=batch_size,
-        shuffle=False,
-        num_workers=num_workers
+        datasets.CIFAR10(root=data_root, train=False, download=True,
+                         transform=get_transforms(colorspace, train=False)),
+        batch_size=batch_size, shuffle=False, num_workers=num_workers, pin_memory=True,
     )
-    
     return train_loader, test_loader
+
+    
