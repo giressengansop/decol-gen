@@ -1,0 +1,5 @@
+{
+  "experiment": "exp_lab",
+  "colorspace": "lab",
+  "best_val_acc": 0.9179
+}

@@ -1,0 +1,5 @@
+{
+  "experiment": "exp_hsv",
+  "colorspace": "hsv",
+  "best_val_acc": 0.9148
+}
