@@ -8,9 +8,11 @@ import argparse
 import csv
 import json
 import os
+import random
 import shutil
 import time
 
+import numpy as np
 import torch
 import torch.nn as nn
 import yaml
@@ -18,6 +20,15 @@ from timm.optim import create_optimizer_v2
 
 from color_dg.data.loader import get_cifar10_loaders
 from color_dg.models.resnet import create_resnet18
+
+
+def set_seed(seed: int) -> None:
+    random.seed(seed)
+    np.random.seed(seed)
+    torch.manual_seed(seed)
+    torch.cuda.manual_seed_all(seed)
+    torch.backends.cudnn.deterministic = True
+    torch.backends.cudnn.benchmark = False
 
 
 def train_epoch(model, loader, criterion, optimizer, device):
@@ -71,11 +82,13 @@ def main():
     with open(args.config) as f:
         cfg = yaml.safe_load(f)
 
-    # --- 3. Device (GPU if available, otherwise CPU) ---
+    # --- 3. Seed + device ---
+    seed = cfg.get("seed", 42)
+    set_seed(seed)
     device = torch.device(
         cfg.get("device", "cuda") if torch.cuda.is_available() else "cpu"
     )
-    print(f"[{cfg['experiment']}] device={device}  colorspace={cfg['colorspace']}")
+    print(f"[{cfg['experiment']}] seed={seed}  device={device}  colorspace={cfg['colorspace']}")
 
     # --- 4. Output directory + save config for reproducibility ---
     os.makedirs(cfg["output_dir"], exist_ok=True)
