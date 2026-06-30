@@ -7,13 +7,15 @@ from torchvision import transforms
 from .converter import ColorspaceConverter
 
 # Normalization stats for CIFAR-10 per colorspace.
-# RGB: exact values — see github.com/kuangliu/pytorch-cifar
-# HSV / LAB / grayscale: placeholder [0.5, 0.5, 0.5] until computed on the dataset.
+# RGB     : standard values from github.com/kuangliu/pytorch-cifar
+# HSV/LAB : computed on the full CIFAR-10 train set (50 000 images)
+#           using skimage-based converter (all channels in [0, 1])
+# Grayscale: same computation, single channel repeated 3×
 CIFAR10_STATS = {
     "rgb":       {"mean": [0.4914, 0.4822, 0.4465], "std": [0.2023, 0.1994, 0.2010]},
-    "hsv":       {"mean": [0.5, 0.5, 0.5],          "std": [0.5, 0.5, 0.5]},
-    "lab":       {"mean": [0.5, 0.5, 0.5],          "std": [0.5, 0.5, 0.5]},
-    "grayscale": {"mean": [0.5, 0.5, 0.5],          "std": [0.5, 0.5, 0.5]},
+    "hsv":       {"mean": [0.3096, 0.2223, 0.3277], "std": [0.2418, 0.2047, 0.3050]},
+    "lab":       {"mean": [0.3277, 0.3277, 0.3277], "std": [0.2836, 0.1478, 0.1788]},
+    "grayscale": {"mean": [0.4809, 0.4809, 0.4809], "std": [0.2392, 0.2392, 0.2392]},
 }
 
 

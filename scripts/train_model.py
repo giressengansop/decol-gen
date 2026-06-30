@@ -8,42 +8,43 @@ import argparse
 import csv
 import json
 import os
+import shutil
 import time
 
 import torch
 import torch.nn as nn
 import yaml
+from timm.optim import create_optimizer_v2
 
 from color_dg.data.loader import get_cifar10_loaders
 from color_dg.models.resnet import create_resnet18
 
 
 def train_epoch(model, loader, criterion, optimizer, device):
-    model.train()  # active dropout, BatchNorm en mode train
+    model.train()
     total_loss, correct, total = 0.0, 0, 0
 
     for inputs, targets in loader:
         inputs, targets = inputs.to(device), targets.to(device)
 
-        optimizer.zero_grad()          # rsets the gradients to zero
-        outputs = model(inputs)        # forward pass
-        loss = criterion(outputs, targets)  # calculation based on loss
-        loss.backward()                # backward pass (calculation of gradients)
-        optimizer.step()               # update weights
+        optimizer.zero_grad()
+        outputs = model(inputs)
+        loss = criterion(outputs, targets)
+        loss.backward()
+        optimizer.step()
 
-        total_loss += loss.item() * inputs.size(0)  # cumulative loss
-        correct += outputs.argmax(1).eq(targets).sum().item()  # correct predictions
-        total += inputs.size(0)        # total number of examples seen
+        total_loss += loss.item() * inputs.size(0)
+        correct += outputs.argmax(1).eq(targets).sum().item()
+        total += inputs.size(0)
 
-    return total_loss / total, correct / total  # average loss, accuracy
-
+    return total_loss / total, correct / total
 
 
 def eval_epoch(model, loader, criterion, device):
-    model.eval()  # BatchNorm uses running statistics, not batch statistics
+    model.eval()
     total_loss, correct, total = 0.0, 0, 0
 
-    with torch.no_grad():  # disables gradient calculation
+    with torch.no_grad():
         for inputs, targets in loader:
             inputs, targets = inputs.to(device), targets.to(device)
 
@@ -54,7 +55,7 @@ def eval_epoch(model, loader, criterion, device):
             correct += outputs.argmax(1).eq(targets).sum().item()
             total += inputs.size(0)
 
-    return total_loss / total, correct / total  # average loss, accuracy
+    return total_loss / total, correct / total
 
 
 
@@ -76,8 +77,9 @@ def main():
     )
     print(f"[{cfg['experiment']}] device={device}  colorspace={cfg['colorspace']}")
 
-    # --- 4. output directory---
+    # --- 4. Output directory + save config for reproducibility ---
     os.makedirs(cfg["output_dir"], exist_ok=True)
+    shutil.copy(args.config, os.path.join(cfg["output_dir"], "config.yaml"))
 
     # --- 5. Data loaders ---
     train_loader, test_loader = get_cifar10_loaders(
@@ -86,20 +88,23 @@ def main():
         num_workers=cfg["data"]["num_workers"],
     )
 
-    # --- 6. models ---
+    # --- 6. Model (timm ResNet-18 via create_resnet18) ---
+    model_name = cfg["model"].get("name", "resnet18")
     model = create_resnet18(
         num_classes=cfg["model"]["num_classes"],
         pretrained=cfg["model"].get("pretrained", False),
     ).to(device)
 
-    # --- 7. Loss, optimizer, scheduler ---
+    # --- 7. Loss, optimizer (timm), scheduler ---
     criterion = nn.CrossEntropyLoss()
 
-    if cfg["training"]["optimizer"] == "adam":
-        optimizer = torch.optim.Adam(model.parameters(), lr=cfg["training"]["learning_rate"])
-    else:
-        optimizer = torch.optim.SGD(model.parameters(), lr=cfg["training"]["learning_rate"],
-                                    momentum=0.9, weight_decay=5e-4)
+    # create_optimizer_v2 excludes BN and bias params from weight decay automatically.
+    optimizer = create_optimizer_v2(
+        model,
+        opt=cfg["training"]["optimizer"],
+        lr=cfg["training"]["learning_rate"],
+        weight_decay=cfg["training"].get("weight_decay", 5e-4),
+    )
 
     scheduler = torch.optim.lr_scheduler.StepLR(
         optimizer,
@@ -149,9 +154,10 @@ def main():
         writer.writerows(rows)
 
     summary = {
-        "experiment":    cfg["experiment"],
-        "colorspace":    cfg["colorspace"],
-        "best_val_acc":  best_acc,
+        "experiment":   cfg["experiment"],
+        "model_name":   model_name,
+        "colorspace":   cfg["colorspace"],
+        "best_val_acc": best_acc,
     }
     with open(os.path.join(cfg["output_dir"], "summary.json"), "w") as f:
         json.dump(summary, f, indent=2)

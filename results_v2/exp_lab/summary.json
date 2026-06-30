@@ -1,0 +1,6 @@
+{
+  "experiment": "exp_lab",
+  "model_name": "resnet18",
+  "colorspace": "lab",
+  "best_val_acc": 0.9096
+}

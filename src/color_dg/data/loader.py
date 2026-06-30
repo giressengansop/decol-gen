@@ -13,12 +13,14 @@ def get_cifar10_loaders(
     train_loader = DataLoader(
         datasets.CIFAR10(root=data_root, train=True,  download=True,
                          transform=get_transforms(colorspace, train=True)),
-        batch_size=batch_size, shuffle=True,  num_workers=num_workers, pin_memory=True,
+        batch_size=batch_size, shuffle=True,  num_workers=num_workers,
+        pin_memory=True, persistent_workers=(num_workers > 0),
     )
     test_loader = DataLoader(
         datasets.CIFAR10(root=data_root, train=False, download=True,
                          transform=get_transforms(colorspace, train=False)),
-        batch_size=batch_size, shuffle=False, num_workers=num_workers, pin_memory=True,
+        batch_size=batch_size, shuffle=False, num_workers=num_workers,
+        pin_memory=True, persistent_workers=(num_workers > 0),
     )
     return train_loader, test_loader
 

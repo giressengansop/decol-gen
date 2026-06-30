@@ -1,6 +1,6 @@
-# LAB Experiment Configuration
-experiment: "exp_lab"
-colorspace: "lab"
+# Grayscale Experiment Configuration
+experiment: "exp_grayscale"
+colorspace: "grayscale"
 
 model:
   name: "resnet18"
@@ -24,4 +24,4 @@ data:
 
 device: "cuda"
 
-output_dir: "results_v2/exp_lab"
+output_dir: "results_v2/exp_grayscale"

@@ -1,0 +1,6 @@
+{
+  "experiment": "exp_hsv",
+  "model_name": "resnet18",
+  "colorspace": "hsv",
+  "best_val_acc": 0.9018
+}
