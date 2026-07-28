@@ -1,0 +1,2445 @@
+=== CIFAR-10-C eval seed=42 -> results_v4/cifar10c_seed42 ===
+Device: cuda
+CIFAR-10-C root: data/CIFAR-10-C
+
+============================================================
+Experiment : baseline_rgb  (colorspace=rgb)
+Checkpoint : results_v4/baseline_rgb_seed42/best_model.pth
+  gaussian_noise         sev=1  acc=0.7838
+  gaussian_noise         sev=2  acc=0.6207
+  gaussian_noise         sev=3  acc=0.4441
+  gaussian_noise         sev=4  acc=0.3684
+  gaussian_noise         sev=5  acc=0.3047
+                         mean=0.5043
+  shot_noise             sev=1  acc=0.8453
+  shot_noise             sev=2  acc=0.7642
+  shot_noise             sev=3  acc=0.5731
+  shot_noise             sev=4  acc=0.4976
+  shot_noise             sev=5  acc=0.3787
+                         mean=0.6118
+  impulse_noise          sev=1  acc=0.8544
+  impulse_noise          sev=2  acc=0.7543
+  impulse_noise          sev=3  acc=0.6643
+  impulse_noise          sev=4  acc=0.4624
+  impulse_noise          sev=5  acc=0.2900
+                         mean=0.6051
+  speckle_noise          sev=1  acc=0.8438
+  speckle_noise          sev=2  acc=0.7193
+  speckle_noise          sev=3  acc=0.6566
+  speckle_noise          sev=4  acc=0.5295
+  speckle_noise          sev=5  acc=0.4234
+                         mean=0.6345
+  defocus_blur           sev=1  acc=0.9232
+  defocus_blur           sev=2  acc=0.9038
+  defocus_blur           sev=3  acc=0.8334
+  defocus_blur           sev=4  acc=0.7038
+  defocus_blur           sev=5  acc=0.5072
+                         mean=0.7743
+  glass_blur             sev=1  acc=0.5512
+  glass_blur             sev=2  acc=0.5663
+  glass_blur             sev=3  acc=0.6030
+  glass_blur             sev=4  acc=0.4560
+  glass_blur             sev=5  acc=0.4875
+                         mean=0.5328
+  motion_blur            sev=1  acc=0.8601
+  motion_blur            sev=2  acc=0.7682
+  motion_blur            sev=3  acc=0.6804
+  motion_blur            sev=4  acc=0.6812
+  motion_blur            sev=5  acc=0.5969
+                         mean=0.7174
+  zoom_blur              sev=1  acc=0.8357
+  zoom_blur              sev=2  acc=0.7967
+  zoom_blur              sev=3  acc=0.7289
+  zoom_blur              sev=4  acc=0.6665
+  zoom_blur              sev=5  acc=0.5684
+                         mean=0.7192
+  gaussian_blur          sev=1  acc=0.9235
+  gaussian_blur          sev=2  acc=0.8301
+  gaussian_blur          sev=3  acc=0.7006
+  gaussian_blur          sev=4  acc=0.5435
+  gaussian_blur          sev=5  acc=0.3325
+                         mean=0.6660
+  snow                   sev=1  acc=0.8740
+  snow                   sev=2  acc=0.7575
+  snow                   sev=3  acc=0.7964
+  snow                   sev=4  acc=0.7696
+  snow                   sev=5  acc=0.7097
+                         mean=0.7814
+  frost                  sev=1  acc=0.8791
+  frost                  sev=2  acc=0.8226
+  frost                  sev=3  acc=0.7264
+  frost                  sev=4  acc=0.7077
+  frost                  sev=5  acc=0.6019
+                         mean=0.7475
+  fog                    sev=1  acc=0.9225
+  fog                    sev=2  acc=0.9059
+  fog                    sev=3  acc=0.8752
+  fog                    sev=4  acc=0.8343
+  fog                    sev=5  acc=0.6591
+                         mean=0.8394 [LUMINOSITY]
+  brightness             sev=1  acc=0.9268
+  brightness             sev=2  acc=0.9192
+  brightness             sev=3  acc=0.9121
+  brightness             sev=4  acc=0.8967
+  brightness             sev=5  acc=0.8651
+                         mean=0.9040 [LUMINOSITY]
+  spatter                sev=1  acc=0.9052
+  spatter                sev=2  acc=0.8589
+  spatter                sev=3  acc=0.8063
+  spatter                sev=4  acc=0.8425
+  spatter                sev=5  acc=0.7606
+                         mean=0.8347
+  contrast               sev=1  acc=0.9169
+  contrast               sev=2  acc=0.8697
+  contrast               sev=3  acc=0.8154
+  contrast               sev=4  acc=0.6975
+  contrast               sev=5  acc=0.3166
+                         mean=0.7232 [LUMINOSITY]
+  elastic_transform      sev=1  acc=0.8708
+  elastic_transform      sev=2  acc=0.8652
+  elastic_transform      sev=3  acc=0.8247
+  elastic_transform      sev=4  acc=0.7761
+  elastic_transform      sev=5  acc=0.7530
+                         mean=0.8180
+  pixelate               sev=1  acc=0.9010
+  pixelate               sev=2  acc=0.8550
+  pixelate               sev=3  acc=0.8037
+  pixelate               sev=4  acc=0.6425
+  pixelate               sev=5  acc=0.4640
+                         mean=0.7332
+  jpeg_compression       sev=1  acc=0.8535
+  jpeg_compression       sev=2  acc=0.8142
+  jpeg_compression       sev=3  acc=0.7978
+  jpeg_compression       sev=4  acc=0.7764
+  jpeg_compression       sev=5  acc=0.7431
+                         mean=0.7970
+  saturate               sev=1  acc=0.8961
+  saturate               sev=2  acc=0.8711
+  saturate               sev=3  acc=0.9162
+  saturate               sev=4  acc=0.8723
+  saturate               sev=5  acc=0.8056
+                         mean=0.8723
+
+============================================================
+Experiment : exp_lab  (colorspace=lab)
+Checkpoint : results_v4/exp_lab_seed42/best_model.pth
+  gaussian_noise         sev=1  acc=0.7467
+  gaussian_noise         sev=2  acc=0.5368
+  gaussian_noise         sev=3  acc=0.3588
+  gaussian_noise         sev=4  acc=0.3007
+  gaussian_noise         sev=5  acc=0.2617
+                         mean=0.4409
+  shot_noise             sev=1  acc=0.8263
+  shot_noise             sev=2  acc=0.7199
+  shot_noise             sev=3  acc=0.4949
+  shot_noise             sev=4  acc=0.4211
+  shot_noise             sev=5  acc=0.3308
+                         mean=0.5586
+  impulse_noise          sev=1  acc=0.8526
+  impulse_noise          sev=2  acc=0.7535
+  impulse_noise          sev=3  acc=0.6708
+  impulse_noise          sev=4  acc=0.5121
+  impulse_noise          sev=5  acc=0.3664
+                         mean=0.6311
+  speckle_noise          sev=1  acc=0.8225
+  speckle_noise          sev=2  acc=0.6744
+  speckle_noise          sev=3  acc=0.6015
+  speckle_noise          sev=4  acc=0.4830
+  speckle_noise          sev=5  acc=0.4089
+                         mean=0.5981
+  defocus_blur           sev=1  acc=0.9268
+  defocus_blur           sev=2  acc=0.9083
+  defocus_blur           sev=3  acc=0.8552
+  defocus_blur           sev=4  acc=0.7536
+  defocus_blur           sev=5  acc=0.5600
+                         mean=0.8008
+  glass_blur             sev=1  acc=0.6065
+  glass_blur             sev=2  acc=0.6215
+  glass_blur             sev=3  acc=0.6464
+  glass_blur             sev=4  acc=0.5090
+  glass_blur             sev=5  acc=0.5350
+                         mean=0.5837
+  motion_blur            sev=1  acc=0.8666
+  motion_blur            sev=2  acc=0.7827
+  motion_blur            sev=3  acc=0.6996
+  motion_blur            sev=4  acc=0.6994
+  motion_blur            sev=5  acc=0.6235
+                         mean=0.7344
+  zoom_blur              sev=1  acc=0.8462
+  zoom_blur              sev=2  acc=0.8183
+  zoom_blur              sev=3  acc=0.7600
+  zoom_blur              sev=4  acc=0.7037
+  zoom_blur              sev=5  acc=0.6100
+                         mean=0.7476
+  gaussian_blur          sev=1  acc=0.9266
+  gaussian_blur          sev=2  acc=0.8533
+  gaussian_blur          sev=3  acc=0.7505
+  gaussian_blur          sev=4  acc=0.6071
+  gaussian_blur          sev=5  acc=0.3823
+                         mean=0.7040
+  snow                   sev=1  acc=0.8738
+  snow                   sev=2  acc=0.7932
+  snow                   sev=3  acc=0.8079
+  snow                   sev=4  acc=0.7831
+  snow                   sev=5  acc=0.7290
+                         mean=0.7974
+  frost                  sev=1  acc=0.8835
+  frost                  sev=2  acc=0.8369
+  frost                  sev=3  acc=0.7457
+  frost                  sev=4  acc=0.7337
+  frost                  sev=5  acc=0.6384
+                         mean=0.7676
+  fog                    sev=1  acc=0.9239
+  fog                    sev=2  acc=0.9070
+  fog                    sev=3  acc=0.8791
+  fog                    sev=4  acc=0.8386
+  fog                    sev=5  acc=0.6719
+                         mean=0.8441 [LUMINOSITY]
+  brightness             sev=1  acc=0.9274
+  brightness             sev=2  acc=0.9207
+  brightness             sev=3  acc=0.9121
+  brightness             sev=4  acc=0.9009
+  brightness             sev=5  acc=0.8723
+                         mean=0.9067 [LUMINOSITY]
+  spatter                sev=1  acc=0.9051
+  spatter                sev=2  acc=0.8623
+  spatter                sev=3  acc=0.8135
+  spatter                sev=4  acc=0.8505
+  spatter                sev=5  acc=0.7671
+                         mean=0.8397
+  contrast               sev=1  acc=0.9191
+  contrast               sev=2  acc=0.8689
+  contrast               sev=3  acc=0.8151
+  contrast               sev=4  acc=0.6822
+  contrast               sev=5  acc=0.2733
+                         mean=0.7117 [LUMINOSITY]
+  elastic_transform      sev=1  acc=0.8781
+  elastic_transform      sev=2  acc=0.8720
+  elastic_transform      sev=3  acc=0.8312
+  elastic_transform      sev=4  acc=0.7847
+  elastic_transform      sev=5  acc=0.7618
+                         mean=0.8256
+  pixelate               sev=1  acc=0.9049
+  pixelate               sev=2  acc=0.8632
+  pixelate               sev=3  acc=0.8247
+  pixelate               sev=4  acc=0.6748
+  pixelate               sev=5  acc=0.5069
+                         mean=0.7549
+  jpeg_compression       sev=1  acc=0.8534
+  jpeg_compression       sev=2  acc=0.8113
+  jpeg_compression       sev=3  acc=0.7933
+  jpeg_compression       sev=4  acc=0.7708
+  jpeg_compression       sev=5  acc=0.7363
+                         mean=0.7930
+  saturate               sev=1  acc=0.8987
+  saturate               sev=2  acc=0.8695
+  saturate               sev=3  acc=0.9186
+  saturate               sev=4  acc=0.8831
+  saturate               sev=5  acc=0.8315
+                         mean=0.8803
+
+============================================================
+Experiment : exp_hsv  (colorspace=hsv)
+Checkpoint : results_v4/exp_hsv_seed42/best_model.pth
+  gaussian_noise         sev=1  acc=0.7698
+  gaussian_noise         sev=2  acc=0.5955
+  gaussian_noise         sev=3  acc=0.4083
+  gaussian_noise         sev=4  acc=0.3366
+  gaussian_noise         sev=5  acc=0.2844
+                         mean=0.4789
+  shot_noise             sev=1  acc=0.8351
+  shot_noise             sev=2  acc=0.7489
+  shot_noise             sev=3  acc=0.5266
+  shot_noise             sev=4  acc=0.4324
+  shot_noise             sev=5  acc=0.3167
+                         mean=0.5719
+  impulse_noise          sev=1  acc=0.8372
+  impulse_noise          sev=2  acc=0.7383
+  impulse_noise          sev=3  acc=0.6192
+  impulse_noise          sev=4  acc=0.3527
+  impulse_noise          sev=5  acc=0.2149
+                         mean=0.5525
+  speckle_noise          sev=1  acc=0.8298
+  speckle_noise          sev=2  acc=0.6973
+  speckle_noise          sev=3  acc=0.6204
+  speckle_noise          sev=4  acc=0.4810
+  speckle_noise          sev=5  acc=0.3661
+                         mean=0.5989
+  defocus_blur           sev=1  acc=0.9192
+  defocus_blur           sev=2  acc=0.9003
+  defocus_blur           sev=3  acc=0.8489
+  defocus_blur           sev=4  acc=0.7463
+  defocus_blur           sev=5  acc=0.5713
+                         mean=0.7972
+  glass_blur             sev=1  acc=0.6173
+  glass_blur             sev=2  acc=0.6261
+  glass_blur             sev=3  acc=0.6677
+  glass_blur             sev=4  acc=0.4921
+  glass_blur             sev=5  acc=0.5398
+                         mean=0.5886
+  motion_blur            sev=1  acc=0.8673
+  motion_blur            sev=2  acc=0.7934
+  motion_blur            sev=3  acc=0.7052
+  motion_blur            sev=4  acc=0.7060
+  motion_blur            sev=5  acc=0.6247
+                         mean=0.7393
+  zoom_blur              sev=1  acc=0.8396
+  zoom_blur              sev=2  acc=0.8099
+  zoom_blur              sev=3  acc=0.7480
+  zoom_blur              sev=4  acc=0.6995
+  zoom_blur              sev=5  acc=0.6100
+                         mean=0.7414
+  gaussian_blur          sev=1  acc=0.9187
+  gaussian_blur          sev=2  acc=0.8478
+  gaussian_blur          sev=3  acc=0.7470
+  gaussian_blur          sev=4  acc=0.6226
+  gaussian_blur          sev=5  acc=0.4023
+                         mean=0.7077
+  snow                   sev=1  acc=0.8731
+  snow                   sev=2  acc=0.7841
+  snow                   sev=3  acc=0.8060
+  snow                   sev=4  acc=0.7742
+  snow                   sev=5  acc=0.7473
+                         mean=0.7969
+  frost                  sev=1  acc=0.8790
+  frost                  sev=2  acc=0.8340
+  frost                  sev=3  acc=0.7617
+  frost                  sev=4  acc=0.7470
+  frost                  sev=5  acc=0.6629
+                         mean=0.7769
+  fog                    sev=1  acc=0.9179
+  fog                    sev=2  acc=0.8983
+  fog                    sev=3  acc=0.8717
+  fog                    sev=4  acc=0.8302
+  fog                    sev=5  acc=0.6996
+                         mean=0.8435 [LUMINOSITY]
+  brightness             sev=1  acc=0.9207
+  brightness             sev=2  acc=0.9149
+  brightness             sev=3  acc=0.9077
+  brightness             sev=4  acc=0.8939
+  brightness             sev=5  acc=0.8574
+                         mean=0.8989 [LUMINOSITY]
+  spatter                sev=1  acc=0.9009
+  spatter                sev=2  acc=0.8645
+  spatter                sev=3  acc=0.8174
+  spatter                sev=4  acc=0.8478
+  spatter                sev=5  acc=0.7766
+                         mean=0.8414
+  contrast               sev=1  acc=0.9112
+  contrast               sev=2  acc=0.8583
+  contrast               sev=3  acc=0.7955
+  contrast               sev=4  acc=0.6615
+  contrast               sev=5  acc=0.2796
+                         mean=0.7012 [LUMINOSITY]
+  elastic_transform      sev=1  acc=0.8687
+  elastic_transform      sev=2  acc=0.8661
+  elastic_transform      sev=3  acc=0.8320
+  elastic_transform      sev=4  acc=0.7893
+  elastic_transform      sev=5  acc=0.7651
+                         mean=0.8242
+  pixelate               sev=1  acc=0.9018
+  pixelate               sev=2  acc=0.8627
+  pixelate               sev=3  acc=0.8339
+  pixelate               sev=4  acc=0.7091
+  pixelate               sev=5  acc=0.5449
+                         mean=0.7705
+  jpeg_compression       sev=1  acc=0.8604
+  jpeg_compression       sev=2  acc=0.8278
+  jpeg_compression       sev=3  acc=0.8113
+  jpeg_compression       sev=4  acc=0.7952
+  jpeg_compression       sev=5  acc=0.7631
+                         mean=0.8116
+  saturate               sev=1  acc=0.8917
+  saturate               sev=2  acc=0.8685
+  saturate               sev=3  acc=0.9146
+  saturate               sev=4  acc=0.8952
+  saturate               sev=5  acc=0.8774
+                         mean=0.8895
+
+============================================================
+Experiment : exp_grayscale  (colorspace=grayscale)
+Checkpoint : results_v4/exp_grayscale_seed42/best_model.pth
+  gaussian_noise         sev=1  acc=0.6683
+  gaussian_noise         sev=2  acc=0.4843
+  gaussian_noise         sev=3  acc=0.3289
+  gaussian_noise         sev=4  acc=0.2799
+  gaussian_noise         sev=5  acc=0.2387
+                         mean=0.4000
+  shot_noise             sev=1  acc=0.7667
+  shot_noise             sev=2  acc=0.6605
+  shot_noise             sev=3  acc=0.4516
+  shot_noise             sev=4  acc=0.3828
+  shot_noise             sev=5  acc=0.2823
+                         mean=0.5088
+  impulse_noise          sev=1  acc=0.7961
+  impulse_noise          sev=2  acc=0.6860
+  impulse_noise          sev=3  acc=0.6003
+  impulse_noise          sev=4  acc=0.4346
+  impulse_noise          sev=5  acc=0.2964
+                         mean=0.5627
+  speckle_noise          sev=1  acc=0.7693
+  speckle_noise          sev=2  acc=0.6276
+  speckle_noise          sev=3  acc=0.5533
+  speckle_noise          sev=4  acc=0.4237
+  speckle_noise          sev=5  acc=0.3225
+                         mean=0.5393
+  defocus_blur           sev=1  acc=0.9040
+  defocus_blur           sev=2  acc=0.8814
+  defocus_blur           sev=3  acc=0.7890
+  defocus_blur           sev=4  acc=0.5803
+  defocus_blur           sev=5  acc=0.3045
+                         mean=0.6918
+  glass_blur             sev=1  acc=0.3817
+  glass_blur             sev=2  acc=0.4044
+  glass_blur             sev=3  acc=0.4426
+  glass_blur             sev=4  acc=0.3145
+  glass_blur             sev=5  acc=0.3478
+                         mean=0.3782
+  motion_blur            sev=1  acc=0.8100
+  motion_blur            sev=2  acc=0.6769
+  motion_blur            sev=3  acc=0.5416
+  motion_blur            sev=4  acc=0.5479
+  motion_blur            sev=5  acc=0.4545
+                         mean=0.6062
+  zoom_blur              sev=1  acc=0.7760
+  zoom_blur              sev=2  acc=0.7121
+  zoom_blur              sev=3  acc=0.6037
+  zoom_blur              sev=4  acc=0.5063
+  zoom_blur              sev=5  acc=0.3841
+                         mean=0.5964
+  gaussian_blur          sev=1  acc=0.9045
+  gaussian_blur          sev=2  acc=0.7861
+  gaussian_blur          sev=3  acc=0.5632
+  gaussian_blur          sev=4  acc=0.3363
+  gaussian_blur          sev=5  acc=0.1580
+                         mean=0.5496
+  snow                   sev=1  acc=0.8128
+  snow                   sev=2  acc=0.6625
+  snow                   sev=3  acc=0.7163
+  snow                   sev=4  acc=0.6883
+  snow                   sev=5  acc=0.6205
+                         mean=0.7001
+  frost                  sev=1  acc=0.8292
+  frost                  sev=2  acc=0.7429
+  frost                  sev=3  acc=0.6099
+  frost                  sev=4  acc=0.5922
+  frost                  sev=5  acc=0.4768
+                         mean=0.6502
+  fog                    sev=1  acc=0.9003
+  fog                    sev=2  acc=0.8792
+  fog                    sev=3  acc=0.8511
+  fog                    sev=4  acc=0.7954
+  fog                    sev=5  acc=0.5787
+                         mean=0.8009 [LUMINOSITY]
+  brightness             sev=1  acc=0.9055
+  brightness             sev=2  acc=0.8992
+  brightness             sev=3  acc=0.8908
+  brightness             sev=4  acc=0.8771
+  brightness             sev=5  acc=0.8446
+                         mean=0.8834 [LUMINOSITY]
+  spatter                sev=1  acc=0.8579
+  spatter                sev=2  acc=0.7661
+  spatter                sev=3  acc=0.6980
+  spatter                sev=4  acc=0.7848
+  spatter                sev=5  acc=0.6804
+                         mean=0.7574
+  contrast               sev=1  acc=0.8975
+  contrast               sev=2  acc=0.8620
+  contrast               sev=3  acc=0.8220
+  contrast               sev=4  acc=0.7442
+  contrast               sev=5  acc=0.3937
+                         mean=0.7439 [LUMINOSITY]
+  elastic_transform      sev=1  acc=0.8287
+  elastic_transform      sev=2  acc=0.8272
+  elastic_transform      sev=3  acc=0.7591
+  elastic_transform      sev=4  acc=0.6625
+  elastic_transform      sev=5  acc=0.6287
+                         mean=0.7412
+  pixelate               sev=1  acc=0.8632
+  pixelate               sev=2  acc=0.7819
+  pixelate               sev=3  acc=0.7077
+  pixelate               sev=4  acc=0.5189
+  pixelate               sev=5  acc=0.3638
+                         mean=0.6471
+  jpeg_compression       sev=1  acc=0.8310
+  jpeg_compression       sev=2  acc=0.7835
+  jpeg_compression       sev=3  acc=0.7620
+  jpeg_compression       sev=4  acc=0.7315
+  jpeg_compression       sev=5  acc=0.6908
+                         mean=0.7598
+  saturate               sev=1  acc=0.9070
+  saturate               sev=2  acc=0.9040
+  saturate               sev=3  acc=0.9018
+  saturate               sev=4  acc=0.8923
+  saturate               sev=5  acc=0.8754
+                         mean=0.8961
+
+Raw results saved  → results_v4/cifar10c_seed42/results_raw.csv
+Corruption summary → results_v4/cifar10c_seed42/corruption_summary.csv
+Global summary     → results_v4/cifar10c_seed42/summary.json
+
+============================================================
+Experiment              mCA   mCA_lum   mCA_nolum
+------------------------------------------------------------
+baseline_rgb         0.7272  0.8222    0.7093
+exp_lab              0.7326  0.8208    0.7161
+exp_hsv              0.7332  0.8146    0.7180
+exp_grayscale        0.6533  0.8094    0.6241
+============================================================
+Done.
+=== CIFAR-10-C eval seed=0 -> results_v4/cifar10c_seed0 ===
+Device: cuda
+CIFAR-10-C root: data/CIFAR-10-C
+
+============================================================
+Experiment : baseline_rgb  (colorspace=rgb)
+Checkpoint : results_v4/baseline_rgb_seed0/best_model.pth
+  gaussian_noise         sev=1  acc=0.8001
+  gaussian_noise         sev=2  acc=0.6392
+  gaussian_noise         sev=3  acc=0.4542
+  gaussian_noise         sev=4  acc=0.3765
+  gaussian_noise         sev=5  acc=0.3152
+                         mean=0.5170
+  shot_noise             sev=1  acc=0.8549
+  shot_noise             sev=2  acc=0.7808
+  shot_noise             sev=3  acc=0.5974
+  shot_noise             sev=4  acc=0.5206
+  shot_noise             sev=5  acc=0.3900
+                         mean=0.6287
+  impulse_noise          sev=1  acc=0.8478
+  impulse_noise          sev=2  acc=0.7485
+  impulse_noise          sev=3  acc=0.6540
+  impulse_noise          sev=4  acc=0.4397
+  impulse_noise          sev=5  acc=0.2604
+                         mean=0.5901
+  speckle_noise          sev=1  acc=0.8542
+  speckle_noise          sev=2  acc=0.7441
+  speckle_noise          sev=3  acc=0.6822
+  speckle_noise          sev=4  acc=0.5581
+  speckle_noise          sev=5  acc=0.4466
+                         mean=0.6570
+  defocus_blur           sev=1  acc=0.9214
+  defocus_blur           sev=2  acc=0.9034
+  defocus_blur           sev=3  acc=0.8452
+  defocus_blur           sev=4  acc=0.7231
+  defocus_blur           sev=5  acc=0.5045
+                         mean=0.7795
+  glass_blur             sev=1  acc=0.5252
+  glass_blur             sev=2  acc=0.5388
+  glass_blur             sev=3  acc=0.5860
+  glass_blur             sev=4  acc=0.4279
+  glass_blur             sev=5  acc=0.4704
+                         mean=0.5097
+  motion_blur            sev=1  acc=0.8628
+  motion_blur            sev=2  acc=0.7656
+  motion_blur            sev=3  acc=0.6611
+  motion_blur            sev=4  acc=0.6649
+  motion_blur            sev=5  acc=0.5831
+                         mean=0.7075
+  zoom_blur              sev=1  acc=0.8303
+  zoom_blur              sev=2  acc=0.7945
+  zoom_blur              sev=3  acc=0.7276
+  zoom_blur              sev=4  acc=0.6577
+  zoom_blur              sev=5  acc=0.5576
+                         mean=0.7135
+  gaussian_blur          sev=1  acc=0.9213
+  gaussian_blur          sev=2  acc=0.8447
+  gaussian_blur          sev=3  acc=0.7157
+  gaussian_blur          sev=4  acc=0.5468
+  gaussian_blur          sev=5  acc=0.3281
+                         mean=0.6713
+  snow                   sev=1  acc=0.8622
+  snow                   sev=2  acc=0.7566
+  snow                   sev=3  acc=0.7904
+  snow                   sev=4  acc=0.7557
+  snow                   sev=5  acc=0.7088
+                         mean=0.7747
+  frost                  sev=1  acc=0.8828
+  frost                  sev=2  acc=0.8266
+  frost                  sev=3  acc=0.7355
+  frost                  sev=4  acc=0.7207
+  frost                  sev=5  acc=0.6158
+                         mean=0.7563
+  fog                    sev=1  acc=0.9236
+  fog                    sev=2  acc=0.9073
+  fog                    sev=3  acc=0.8804
+  fog                    sev=4  acc=0.8416
+  fog                    sev=5  acc=0.6629
+                         mean=0.8432 [LUMINOSITY]
+  brightness             sev=1  acc=0.9217
+  brightness             sev=2  acc=0.9165
+  brightness             sev=3  acc=0.9099
+  brightness             sev=4  acc=0.9002
+  brightness             sev=5  acc=0.8715
+                         mean=0.9040 [LUMINOSITY]
+  spatter                sev=1  acc=0.8955
+  spatter                sev=2  acc=0.8440
+  spatter                sev=3  acc=0.7956
+  spatter                sev=4  acc=0.8410
+  spatter                sev=5  acc=0.7465
+                         mean=0.8245
+  contrast               sev=1  acc=0.9176
+  contrast               sev=2  acc=0.8755
+  contrast               sev=3  acc=0.8265
+  contrast               sev=4  acc=0.7050
+  contrast               sev=5  acc=0.3054
+                         mean=0.7260 [LUMINOSITY]
+  elastic_transform      sev=1  acc=0.8716
+  elastic_transform      sev=2  acc=0.8660
+  elastic_transform      sev=3  acc=0.8260
+  elastic_transform      sev=4  acc=0.7668
+  elastic_transform      sev=5  acc=0.7397
+                         mean=0.8140
+  pixelate               sev=1  acc=0.8999
+  pixelate               sev=2  acc=0.8524
+  pixelate               sev=3  acc=0.8080
+  pixelate               sev=4  acc=0.6683
+  pixelate               sev=5  acc=0.5044
+                         mean=0.7466
+  jpeg_compression       sev=1  acc=0.8535
+  jpeg_compression       sev=2  acc=0.8139
+  jpeg_compression       sev=3  acc=0.7903
+  jpeg_compression       sev=4  acc=0.7714
+  jpeg_compression       sev=5  acc=0.7365
+                         mean=0.7931
+  saturate               sev=1  acc=0.9009
+  saturate               sev=2  acc=0.8747
+  saturate               sev=3  acc=0.9152
+  saturate               sev=4  acc=0.8770
+  saturate               sev=5  acc=0.8184
+                         mean=0.8772
+
+============================================================
+Experiment : exp_lab  (colorspace=lab)
+Checkpoint : results_v4/exp_lab_seed0/best_model.pth
+  gaussian_noise         sev=1  acc=0.7302
+  gaussian_noise         sev=2  acc=0.4995
+  gaussian_noise         sev=3  acc=0.3275
+  gaussian_noise         sev=4  acc=0.2707
+  gaussian_noise         sev=5  acc=0.2243
+                         mean=0.4104
+  shot_noise             sev=1  acc=0.8130
+  shot_noise             sev=2  acc=0.6964
+  shot_noise             sev=3  acc=0.4583
+  shot_noise             sev=4  acc=0.3806
+  shot_noise             sev=5  acc=0.2849
+                         mean=0.5266
+  impulse_noise          sev=1  acc=0.8565
+  impulse_noise          sev=2  acc=0.7527
+  impulse_noise          sev=3  acc=0.6565
+  impulse_noise          sev=4  acc=0.4773
+  impulse_noise          sev=5  acc=0.3223
+                         mean=0.6131
+  speckle_noise          sev=1  acc=0.8143
+  speckle_noise          sev=2  acc=0.6473
+  speckle_noise          sev=3  acc=0.5712
+  speckle_noise          sev=4  acc=0.4391
+  speckle_noise          sev=5  acc=0.3446
+                         mean=0.5633
+  defocus_blur           sev=1  acc=0.9276
+  defocus_blur           sev=2  acc=0.9090
+  defocus_blur           sev=3  acc=0.8503
+  defocus_blur           sev=4  acc=0.7417
+  defocus_blur           sev=5  acc=0.5479
+                         mean=0.7953
+  glass_blur             sev=1  acc=0.5993
+  glass_blur             sev=2  acc=0.6167
+  glass_blur             sev=3  acc=0.6424
+  glass_blur             sev=4  acc=0.5061
+  glass_blur             sev=5  acc=0.5295
+                         mean=0.5788
+  motion_blur            sev=1  acc=0.8691
+  motion_blur            sev=2  acc=0.7816
+  motion_blur            sev=3  acc=0.6975
+  motion_blur            sev=4  acc=0.6977
+  motion_blur            sev=5  acc=0.6280
+                         mean=0.7348
+  zoom_blur              sev=1  acc=0.8458
+  zoom_blur              sev=2  acc=0.8170
+  zoom_blur              sev=3  acc=0.7605
+  zoom_blur              sev=4  acc=0.7074
+  zoom_blur              sev=5  acc=0.6160
+                         mean=0.7493
+  gaussian_blur          sev=1  acc=0.9276
+  gaussian_blur          sev=2  acc=0.8480
+  gaussian_blur          sev=3  acc=0.7354
+  gaussian_blur          sev=4  acc=0.5917
+  gaussian_blur          sev=5  acc=0.3637
+                         mean=0.6933
+  snow                   sev=1  acc=0.8779
+  snow                   sev=2  acc=0.7740
+  snow                   sev=3  acc=0.8046
+  snow                   sev=4  acc=0.7689
+  snow                   sev=5  acc=0.7213
+                         mean=0.7893
+  frost                  sev=1  acc=0.8859
+  frost                  sev=2  acc=0.8325
+  frost                  sev=3  acc=0.7453
+  frost                  sev=4  acc=0.7336
+  frost                  sev=5  acc=0.6411
+                         mean=0.7677
+  fog                    sev=1  acc=0.9282
+  fog                    sev=2  acc=0.9119
+  fog                    sev=3  acc=0.8842
+  fog                    sev=4  acc=0.8377
+  fog                    sev=5  acc=0.6766
+                         mean=0.8477 [LUMINOSITY]
+  brightness             sev=1  acc=0.9306
+  brightness             sev=2  acc=0.9248
+  brightness             sev=3  acc=0.9158
+  brightness             sev=4  acc=0.9031
+  brightness             sev=5  acc=0.8704
+                         mean=0.9089 [LUMINOSITY]
+  spatter                sev=1  acc=0.9088
+  spatter                sev=2  acc=0.8625
+  spatter                sev=3  acc=0.8130
+  spatter                sev=4  acc=0.8469
+  spatter                sev=5  acc=0.7602
+                         mean=0.8383
+  contrast               sev=1  acc=0.9232
+  contrast               sev=2  acc=0.8734
+  contrast               sev=3  acc=0.8187
+  contrast               sev=4  acc=0.6868
+  contrast               sev=5  acc=0.2636
+                         mean=0.7131 [LUMINOSITY]
+  elastic_transform      sev=1  acc=0.8786
+  elastic_transform      sev=2  acc=0.8711
+  elastic_transform      sev=3  acc=0.8314
+  elastic_transform      sev=4  acc=0.7820
+  elastic_transform      sev=5  acc=0.7613
+                         mean=0.8249
+  pixelate               sev=1  acc=0.9083
+  pixelate               sev=2  acc=0.8639
+  pixelate               sev=3  acc=0.8304
+  pixelate               sev=4  acc=0.6869
+  pixelate               sev=5  acc=0.5126
+                         mean=0.7604
+  jpeg_compression       sev=1  acc=0.8497
+  jpeg_compression       sev=2  acc=0.8004
+  jpeg_compression       sev=3  acc=0.7822
+  jpeg_compression       sev=4  acc=0.7583
+  jpeg_compression       sev=5  acc=0.7293
+                         mean=0.7840
+  saturate               sev=1  acc=0.9001
+  saturate               sev=2  acc=0.8646
+  saturate               sev=3  acc=0.9186
+  saturate               sev=4  acc=0.8816
+  saturate               sev=5  acc=0.8258
+                         mean=0.8781
+
+============================================================
+Experiment : exp_hsv  (colorspace=hsv)
+Checkpoint : results_v4/exp_hsv_seed0/best_model.pth
+  gaussian_noise         sev=1  acc=0.7761
+  gaussian_noise         sev=2  acc=0.6235
+  gaussian_noise         sev=3  acc=0.4627
+  gaussian_noise         sev=4  acc=0.3871
+  gaussian_noise         sev=5  acc=0.3295
+                         mean=0.5158
+  shot_noise             sev=1  acc=0.8330
+  shot_noise             sev=2  acc=0.7571
+  shot_noise             sev=3  acc=0.5737
+  shot_noise             sev=4  acc=0.4855
+  shot_noise             sev=5  acc=0.3671
+                         mean=0.6033
+  impulse_noise          sev=1  acc=0.8298
+  impulse_noise          sev=2  acc=0.7196
+  impulse_noise          sev=3  acc=0.6000
+  impulse_noise          sev=4  acc=0.3817
+  impulse_noise          sev=5  acc=0.2429
+                         mean=0.5548
+  speckle_noise          sev=1  acc=0.8364
+  speckle_noise          sev=2  acc=0.7231
+  speckle_noise          sev=3  acc=0.6597
+  speckle_noise          sev=4  acc=0.5343
+  speckle_noise          sev=5  acc=0.4149
+                         mean=0.6337
+  defocus_blur           sev=1  acc=0.9169
+  defocus_blur           sev=2  acc=0.9007
+  defocus_blur           sev=3  acc=0.8540
+  defocus_blur           sev=4  acc=0.7476
+  defocus_blur           sev=5  acc=0.5725
+                         mean=0.7983
+  glass_blur             sev=1  acc=0.6213
+  glass_blur             sev=2  acc=0.6333
+  glass_blur             sev=3  acc=0.6663
+  glass_blur             sev=4  acc=0.4963
+  glass_blur             sev=5  acc=0.5353
+                         mean=0.5905
+  motion_blur            sev=1  acc=0.8658
+  motion_blur            sev=2  acc=0.7807
+  motion_blur            sev=3  acc=0.7028
+  motion_blur            sev=4  acc=0.7002
+  motion_blur            sev=5  acc=0.6249
+                         mean=0.7349
+  zoom_blur              sev=1  acc=0.8418
+  zoom_blur              sev=2  acc=0.8146
+  zoom_blur              sev=3  acc=0.7564
+  zoom_blur              sev=4  acc=0.7025
+  zoom_blur              sev=5  acc=0.6211
+                         mean=0.7473
+  gaussian_blur          sev=1  acc=0.9166
+  gaussian_blur          sev=2  acc=0.8530
+  gaussian_blur          sev=3  acc=0.7449
+  gaussian_blur          sev=4  acc=0.6159
+  gaussian_blur          sev=5  acc=0.4141
+                         mean=0.7089
+  snow                   sev=1  acc=0.8716
+  snow                   sev=2  acc=0.7836
+  snow                   sev=3  acc=0.8044
+  snow                   sev=4  acc=0.7795
+  snow                   sev=5  acc=0.7435
+                         mean=0.7965
+  frost                  sev=1  acc=0.8824
+  frost                  sev=2  acc=0.8388
+  frost                  sev=3  acc=0.7649
+  frost                  sev=4  acc=0.7518
+  frost                  sev=5  acc=0.6658
+                         mean=0.7807
+  fog                    sev=1  acc=0.9152
+  fog                    sev=2  acc=0.9005
+  fog                    sev=3  acc=0.8763
+  fog                    sev=4  acc=0.8379
+  fog                    sev=5  acc=0.6899
+                         mean=0.8440 [LUMINOSITY]
+  brightness             sev=1  acc=0.9182
+  brightness             sev=2  acc=0.9141
+  brightness             sev=3  acc=0.9054
+  brightness             sev=4  acc=0.8963
+  brightness             sev=5  acc=0.8628
+                         mean=0.8994 [LUMINOSITY]
+  spatter                sev=1  acc=0.9024
+  spatter                sev=2  acc=0.8606
+  spatter                sev=3  acc=0.8161
+  spatter                sev=4  acc=0.8486
+  spatter                sev=5  acc=0.7692
+                         mean=0.8394
+  contrast               sev=1  acc=0.9101
+  contrast               sev=2  acc=0.8597
+  contrast               sev=3  acc=0.8017
+  contrast               sev=4  acc=0.6678
+  contrast               sev=5  acc=0.2750
+                         mean=0.7029 [LUMINOSITY]
+  elastic_transform      sev=1  acc=0.8702
+  elastic_transform      sev=2  acc=0.8651
+  elastic_transform      sev=3  acc=0.8317
+  elastic_transform      sev=4  acc=0.7916
+  elastic_transform      sev=5  acc=0.7694
+                         mean=0.8256
+  pixelate               sev=1  acc=0.9005
+  pixelate               sev=2  acc=0.8621
+  pixelate               sev=3  acc=0.8340
+  pixelate               sev=4  acc=0.7155
+  pixelate               sev=5  acc=0.5654
+                         mean=0.7755
+  jpeg_compression       sev=1  acc=0.8565
+  jpeg_compression       sev=2  acc=0.8264
+  jpeg_compression       sev=3  acc=0.8100
+  jpeg_compression       sev=4  acc=0.7959
+  jpeg_compression       sev=5  acc=0.7669
+                         mean=0.8111
+  saturate               sev=1  acc=0.8895
+  saturate               sev=2  acc=0.8594
+  saturate               sev=3  acc=0.9117
+  saturate               sev=4  acc=0.8924
+  saturate               sev=5  acc=0.8732
+                         mean=0.8852
+
+============================================================
+Experiment : exp_grayscale  (colorspace=grayscale)
+Checkpoint : results_v4/exp_grayscale_seed0/best_model.pth
+  gaussian_noise         sev=1  acc=0.6927
+  gaussian_noise         sev=2  acc=0.5151
+  gaussian_noise         sev=3  acc=0.3543
+  gaussian_noise         sev=4  acc=0.2942
+  gaussian_noise         sev=5  acc=0.2484
+                         mean=0.4209
+  shot_noise             sev=1  acc=0.7816
+  shot_noise             sev=2  acc=0.6870
+  shot_noise             sev=3  acc=0.4998
+  shot_noise             sev=4  acc=0.4210
+  shot_noise             sev=5  acc=0.3022
+                         mean=0.5383
+  impulse_noise          sev=1  acc=0.7939
+  impulse_noise          sev=2  acc=0.6806
+  impulse_noise          sev=3  acc=0.5995
+  impulse_noise          sev=4  acc=0.4717
+  impulse_noise          sev=5  acc=0.3528
+                         mean=0.5797
+  speckle_noise          sev=1  acc=0.7867
+  speckle_noise          sev=2  acc=0.6628
+  speckle_noise          sev=3  acc=0.6018
+  speckle_noise          sev=4  acc=0.4723
+  speckle_noise          sev=5  acc=0.3559
+                         mean=0.5759
+  defocus_blur           sev=1  acc=0.9051
+  defocus_blur           sev=2  acc=0.8750
+  defocus_blur           sev=3  acc=0.7742
+  defocus_blur           sev=4  acc=0.5656
+  defocus_blur           sev=5  acc=0.3254
+                         mean=0.6891
+  glass_blur             sev=1  acc=0.4165
+  glass_blur             sev=2  acc=0.4328
+  glass_blur             sev=3  acc=0.4614
+  glass_blur             sev=4  acc=0.3429
+  glass_blur             sev=5  acc=0.3711
+                         mean=0.4049
+  motion_blur            sev=1  acc=0.8010
+  motion_blur            sev=2  acc=0.6627
+  motion_blur            sev=3  acc=0.5362
+  motion_blur            sev=4  acc=0.5368
+  motion_blur            sev=5  acc=0.4453
+                         mean=0.5964
+  zoom_blur              sev=1  acc=0.7670
+  zoom_blur              sev=2  acc=0.7042
+  zoom_blur              sev=3  acc=0.6055
+  zoom_blur              sev=4  acc=0.5065
+  zoom_blur              sev=5  acc=0.3946
+                         mean=0.5956
+  gaussian_blur          sev=1  acc=0.9055
+  gaussian_blur          sev=2  acc=0.7728
+  gaussian_blur          sev=3  acc=0.5584
+  gaussian_blur          sev=4  acc=0.3397
+  gaussian_blur          sev=5  acc=0.1601
+                         mean=0.5473
+  snow                   sev=1  acc=0.8115
+  snow                   sev=2  acc=0.6489
+  snow                   sev=3  acc=0.7070
+  snow                   sev=4  acc=0.6760
+  snow                   sev=5  acc=0.6155
+                         mean=0.6918
+  frost                  sev=1  acc=0.8354
+  frost                  sev=2  acc=0.7587
+  frost                  sev=3  acc=0.6376
+  frost                  sev=4  acc=0.6185
+  frost                  sev=5  acc=0.5073
+                         mean=0.6715
+  fog                    sev=1  acc=0.9019
+  fog                    sev=2  acc=0.8812
+  fog                    sev=3  acc=0.8507
+  fog                    sev=4  acc=0.7864
+  fog                    sev=5  acc=0.5542
+                         mean=0.7949 [LUMINOSITY]
+  brightness             sev=1  acc=0.9057
+  brightness             sev=2  acc=0.9012
+  brightness             sev=3  acc=0.8909
+  brightness             sev=4  acc=0.8803
+  brightness             sev=5  acc=0.8455
+                         mean=0.8847 [LUMINOSITY]
+  spatter                sev=1  acc=0.8601
+  spatter                sev=2  acc=0.7557
+  spatter                sev=3  acc=0.6903
+  spatter                sev=4  acc=0.7910
+  spatter                sev=5  acc=0.6797
+                         mean=0.7554
+  contrast               sev=1  acc=0.8979
+  contrast               sev=2  acc=0.8616
+  contrast               sev=3  acc=0.8250
+  contrast               sev=4  acc=0.7347
+  contrast               sev=5  acc=0.3625
+                         mean=0.7363 [LUMINOSITY]
+  elastic_transform      sev=1  acc=0.8191
+  elastic_transform      sev=2  acc=0.8234
+  elastic_transform      sev=3  acc=0.7464
+  elastic_transform      sev=4  acc=0.6400
+  elastic_transform      sev=5  acc=0.6132
+                         mean=0.7284
+  pixelate               sev=1  acc=0.8603
+  pixelate               sev=2  acc=0.7612
+  pixelate               sev=3  acc=0.6845
+  pixelate               sev=4  acc=0.5033
+  pixelate               sev=5  acc=0.3477
+                         mean=0.6314
+  jpeg_compression       sev=1  acc=0.8334
+  jpeg_compression       sev=2  acc=0.7819
+  jpeg_compression       sev=3  acc=0.7559
+  jpeg_compression       sev=4  acc=0.7288
+  jpeg_compression       sev=5  acc=0.6910
+                         mean=0.7582
+  saturate               sev=1  acc=0.9065
+  saturate               sev=2  acc=0.9027
+  saturate               sev=3  acc=0.9032
+  saturate               sev=4  acc=0.8889
+  saturate               sev=5  acc=0.8693
+                         mean=0.8941
+
+Raw results saved  → results_v4/cifar10c_seed0/results_raw.csv
+Corruption summary → results_v4/cifar10c_seed0/corruption_summary.csv
+Global summary     → results_v4/cifar10c_seed0/summary.json
+
+============================================================
+Experiment              mCA   mCA_lum   mCA_nolum
+------------------------------------------------------------
+baseline_rgb         0.7281  0.8244    0.7101
+exp_lab              0.7251  0.8233    0.7067
+exp_hsv              0.7394  0.8154    0.7251
+exp_grayscale        0.6576  0.8053    0.6299
+============================================================
+Done.
+=== CIFAR-10-C eval seed=1 -> results_v4/cifar10c_seed1 ===
+Device: cuda
+CIFAR-10-C root: data/CIFAR-10-C
+
+============================================================
+Experiment : baseline_rgb  (colorspace=rgb)
+Checkpoint : results_v4/baseline_rgb_seed1/best_model.pth
+  gaussian_noise         sev=1  acc=0.7987
+  gaussian_noise         sev=2  acc=0.5985
+  gaussian_noise         sev=3  acc=0.3796
+  gaussian_noise         sev=4  acc=0.2958
+  gaussian_noise         sev=5  acc=0.2438
+                         mean=0.4633
+  shot_noise             sev=1  acc=0.8591
+  shot_noise             sev=2  acc=0.7805
+  shot_noise             sev=3  acc=0.5449
+  shot_noise             sev=4  acc=0.4468
+  shot_noise             sev=5  acc=0.3182
+                         mean=0.5899
+  impulse_noise          sev=1  acc=0.8495
+  impulse_noise          sev=2  acc=0.7523
+  impulse_noise          sev=3  acc=0.6488
+  impulse_noise          sev=4  acc=0.3795
+  impulse_noise          sev=5  acc=0.2081
+                         mean=0.5676
+  speckle_noise          sev=1  acc=0.8533
+  speckle_noise          sev=2  acc=0.7220
+  speckle_noise          sev=3  acc=0.6457
+  speckle_noise          sev=4  acc=0.4973
+  speckle_noise          sev=5  acc=0.3798
+                         mean=0.6196
+  defocus_blur           sev=1  acc=0.9244
+  defocus_blur           sev=2  acc=0.9038
+  defocus_blur           sev=3  acc=0.8453
+  defocus_blur           sev=4  acc=0.7219
+  defocus_blur           sev=5  acc=0.5099
+                         mean=0.7811
+  glass_blur             sev=1  acc=0.5559
+  glass_blur             sev=2  acc=0.5670
+  glass_blur             sev=3  acc=0.6140
+  glass_blur             sev=4  acc=0.4522
+  glass_blur             sev=5  acc=0.4923
+                         mean=0.5363
+  motion_blur            sev=1  acc=0.8643
+  motion_blur            sev=2  acc=0.7785
+  motion_blur            sev=3  acc=0.6881
+  motion_blur            sev=4  acc=0.6894
+  motion_blur            sev=5  acc=0.6044
+                         mean=0.7249
+  zoom_blur              sev=1  acc=0.8360
+  zoom_blur              sev=2  acc=0.8054
+  zoom_blur              sev=3  acc=0.7406
+  zoom_blur              sev=4  acc=0.6802
+  zoom_blur              sev=5  acc=0.5739
+                         mean=0.7272
+  gaussian_blur          sev=1  acc=0.9243
+  gaussian_blur          sev=2  acc=0.8424
+  gaussian_blur          sev=3  acc=0.7196
+  gaussian_blur          sev=4  acc=0.5639
+  gaussian_blur          sev=5  acc=0.3309
+                         mean=0.6762
+  snow                   sev=1  acc=0.8640
+  snow                   sev=2  acc=0.7603
+  snow                   sev=3  acc=0.7921
+  snow                   sev=4  acc=0.7669
+  snow                   sev=5  acc=0.7161
+                         mean=0.7799
+  frost                  sev=1  acc=0.8819
+  frost                  sev=2  acc=0.8306
+  frost                  sev=3  acc=0.7388
+  frost                  sev=4  acc=0.7219
+  frost                  sev=5  acc=0.6175
+                         mean=0.7581
+  fog                    sev=1  acc=0.9220
+  fog                    sev=2  acc=0.9057
+  fog                    sev=3  acc=0.8762
+  fog                    sev=4  acc=0.8366
+  fog                    sev=5  acc=0.6555
+                         mean=0.8392 [LUMINOSITY]
+  brightness             sev=1  acc=0.9246
+  brightness             sev=2  acc=0.9186
+  brightness             sev=3  acc=0.9116
+  brightness             sev=4  acc=0.8992
+  brightness             sev=5  acc=0.8707
+                         mean=0.9049 [LUMINOSITY]
+  spatter                sev=1  acc=0.8988
+  spatter                sev=2  acc=0.8495
+  spatter                sev=3  acc=0.8040
+  spatter                sev=4  acc=0.8383
+  spatter                sev=5  acc=0.7495
+                         mean=0.8280
+  contrast               sev=1  acc=0.9157
+  contrast               sev=2  acc=0.8755
+  contrast               sev=3  acc=0.8240
+  contrast               sev=4  acc=0.7025
+  contrast               sev=5  acc=0.2873
+                         mean=0.7210 [LUMINOSITY]
+  elastic_transform      sev=1  acc=0.8696
+  elastic_transform      sev=2  acc=0.8705
+  elastic_transform      sev=3  acc=0.8221
+  elastic_transform      sev=4  acc=0.7726
+  elastic_transform      sev=5  acc=0.7397
+                         mean=0.8149
+  pixelate               sev=1  acc=0.8993
+  pixelate               sev=2  acc=0.8497
+  pixelate               sev=3  acc=0.7945
+  pixelate               sev=4  acc=0.6299
+  pixelate               sev=5  acc=0.4394
+                         mean=0.7226
+  jpeg_compression       sev=1  acc=0.8553
+  jpeg_compression       sev=2  acc=0.8087
+  jpeg_compression       sev=3  acc=0.7947
+  jpeg_compression       sev=4  acc=0.7695
+  jpeg_compression       sev=5  acc=0.7364
+                         mean=0.7929
+  saturate               sev=1  acc=0.8935
+  saturate               sev=2  acc=0.8621
+  saturate               sev=3  acc=0.9196
+  saturate               sev=4  acc=0.8733
+  saturate               sev=5  acc=0.8047
+                         mean=0.8706
+
+============================================================
+Experiment : exp_lab  (colorspace=lab)
+Checkpoint : results_v4/exp_lab_seed1/best_model.pth
+  gaussian_noise         sev=1  acc=0.7303
+  gaussian_noise         sev=2  acc=0.4969
+  gaussian_noise         sev=3  acc=0.3193
+  gaussian_noise         sev=4  acc=0.2727
+  gaussian_noise         sev=5  acc=0.2382
+                         mean=0.4115
+  shot_noise             sev=1  acc=0.8266
+  shot_noise             sev=2  acc=0.7137
+  shot_noise             sev=3  acc=0.4564
+  shot_noise             sev=4  acc=0.3833
+  shot_noise             sev=5  acc=0.2855
+                         mean=0.5331
+  impulse_noise          sev=1  acc=0.8502
+  impulse_noise          sev=2  acc=0.7350
+  impulse_noise          sev=3  acc=0.6300
+  impulse_noise          sev=4  acc=0.4441
+  impulse_noise          sev=5  acc=0.3048
+                         mean=0.5928
+  speckle_noise          sev=1  acc=0.8274
+  speckle_noise          sev=2  acc=0.6566
+  speckle_noise          sev=3  acc=0.5769
+  speckle_noise          sev=4  acc=0.4420
+  speckle_noise          sev=5  acc=0.3445
+                         mean=0.5695
+  defocus_blur           sev=1  acc=0.9215
+  defocus_blur           sev=2  acc=0.9036
+  defocus_blur           sev=3  acc=0.8554
+  defocus_blur           sev=4  acc=0.7541
+  defocus_blur           sev=5  acc=0.5525
+                         mean=0.7974
+  glass_blur             sev=1  acc=0.5605
+  glass_blur             sev=2  acc=0.5817
+  glass_blur             sev=3  acc=0.6293
+  glass_blur             sev=4  acc=0.4506
+  glass_blur             sev=5  acc=0.4981
+                         mean=0.5440
+  motion_blur            sev=1  acc=0.8707
+  motion_blur            sev=2  acc=0.7980
+  motion_blur            sev=3  acc=0.7033
+  motion_blur            sev=4  acc=0.7045
+  motion_blur            sev=5  acc=0.6200
+                         mean=0.7393
+  zoom_blur              sev=1  acc=0.8440
+  zoom_blur              sev=2  acc=0.8167
+  zoom_blur              sev=3  acc=0.7636
+  zoom_blur              sev=4  acc=0.7109
+  zoom_blur              sev=5  acc=0.6184
+                         mean=0.7507
+  gaussian_blur          sev=1  acc=0.9210
+  gaussian_blur          sev=2  acc=0.8523
+  gaussian_blur          sev=3  acc=0.7492
+  gaussian_blur          sev=4  acc=0.6065
+  gaussian_blur          sev=5  acc=0.3565
+                         mean=0.6971
+  snow                   sev=1  acc=0.8704
+  snow                   sev=2  acc=0.7606
+  snow                   sev=3  acc=0.7935
+  snow                   sev=4  acc=0.7640
+  snow                   sev=5  acc=0.7252
+                         mean=0.7827
+  frost                  sev=1  acc=0.8876
+  frost                  sev=2  acc=0.8371
+  frost                  sev=3  acc=0.7553
+  frost                  sev=4  acc=0.7406
+  frost                  sev=5  acc=0.6521
+                         mean=0.7745
+  fog                    sev=1  acc=0.9239
+  fog                    sev=2  acc=0.9059
+  fog                    sev=3  acc=0.8790
+  fog                    sev=4  acc=0.8345
+  fog                    sev=5  acc=0.6688
+                         mean=0.8424 [LUMINOSITY]
+  brightness             sev=1  acc=0.9264
+  brightness             sev=2  acc=0.9210
+  brightness             sev=3  acc=0.9112
+  brightness             sev=4  acc=0.8989
+  brightness             sev=5  acc=0.8664
+                         mean=0.9048 [LUMINOSITY]
+  spatter                sev=1  acc=0.9045
+  spatter                sev=2  acc=0.8558
+  spatter                sev=3  acc=0.8059
+  spatter                sev=4  acc=0.8444
+  spatter                sev=5  acc=0.7652
+                         mean=0.8352
+  contrast               sev=1  acc=0.9186
+  contrast               sev=2  acc=0.8669
+  contrast               sev=3  acc=0.8124
+  contrast               sev=4  acc=0.6871
+  contrast               sev=5  acc=0.3116
+                         mean=0.7193 [LUMINOSITY]
+  elastic_transform      sev=1  acc=0.8746
+  elastic_transform      sev=2  acc=0.8715
+  elastic_transform      sev=3  acc=0.8335
+  elastic_transform      sev=4  acc=0.7909
+  elastic_transform      sev=5  acc=0.7657
+                         mean=0.8272
+  pixelate               sev=1  acc=0.9006
+  pixelate               sev=2  acc=0.8584
+  pixelate               sev=3  acc=0.8212
+  pixelate               sev=4  acc=0.6854
+  pixelate               sev=5  acc=0.5189
+                         mean=0.7569
+  jpeg_compression       sev=1  acc=0.8537
+  jpeg_compression       sev=2  acc=0.8051
+  jpeg_compression       sev=3  acc=0.7869
+  jpeg_compression       sev=4  acc=0.7617
+  jpeg_compression       sev=5  acc=0.7263
+                         mean=0.7867
+  saturate               sev=1  acc=0.8948
+  saturate               sev=2  acc=0.8613
+  saturate               sev=3  acc=0.9193
+  saturate               sev=4  acc=0.8804
+  saturate               sev=5  acc=0.8252
+                         mean=0.8762
+
+============================================================
+Experiment : exp_hsv  (colorspace=hsv)
+Checkpoint : results_v4/exp_hsv_seed1/best_model.pth
+  gaussian_noise         sev=1  acc=0.7636
+  gaussian_noise         sev=2  acc=0.5966
+  gaussian_noise         sev=3  acc=0.4211
+  gaussian_noise         sev=4  acc=0.3529
+  gaussian_noise         sev=5  acc=0.2928
+                         mean=0.4854
+  shot_noise             sev=1  acc=0.8296
+  shot_noise             sev=2  acc=0.7455
+  shot_noise             sev=3  acc=0.5280
+  shot_noise             sev=4  acc=0.4386
+  shot_noise             sev=5  acc=0.3217
+                         mean=0.5727
+  impulse_noise          sev=1  acc=0.8179
+  impulse_noise          sev=2  acc=0.7002
+  impulse_noise          sev=3  acc=0.5610
+  impulse_noise          sev=4  acc=0.2954
+  impulse_noise          sev=5  acc=0.1728
+                         mean=0.5095
+  speckle_noise          sev=1  acc=0.8311
+  speckle_noise          sev=2  acc=0.6972
+  speckle_noise          sev=3  acc=0.6230
+  speckle_noise          sev=4  acc=0.4770
+  speckle_noise          sev=5  acc=0.3615
+                         mean=0.5980
+  defocus_blur           sev=1  acc=0.9173
+  defocus_blur           sev=2  acc=0.9021
+  defocus_blur           sev=3  acc=0.8516
+  defocus_blur           sev=4  acc=0.7534
+  defocus_blur           sev=5  acc=0.5796
+                         mean=0.8008
+  glass_blur             sev=1  acc=0.6142
+  glass_blur             sev=2  acc=0.6280
+  glass_blur             sev=3  acc=0.6708
+  glass_blur             sev=4  acc=0.4828
+  glass_blur             sev=5  acc=0.5272
+                         mean=0.5846
+  motion_blur            sev=1  acc=0.8664
+  motion_blur            sev=2  acc=0.7863
+  motion_blur            sev=3  acc=0.7008
+  motion_blur            sev=4  acc=0.6989
+  motion_blur            sev=5  acc=0.6221
+                         mean=0.7349
+  zoom_blur              sev=1  acc=0.8470
+  zoom_blur              sev=2  acc=0.8184
+  zoom_blur              sev=3  acc=0.7685
+  zoom_blur              sev=4  acc=0.7220
+  zoom_blur              sev=5  acc=0.6360
+                         mean=0.7584
+  gaussian_blur          sev=1  acc=0.9177
+  gaussian_blur          sev=2  acc=0.8480
+  gaussian_blur          sev=3  acc=0.7529
+  gaussian_blur          sev=4  acc=0.6309
+  gaussian_blur          sev=5  acc=0.4182
+                         mean=0.7135
+  snow                   sev=1  acc=0.8702
+  snow                   sev=2  acc=0.7848
+  snow                   sev=3  acc=0.7989
+  snow                   sev=4  acc=0.7782
+  snow                   sev=5  acc=0.7373
+                         mean=0.7939
+  frost                  sev=1  acc=0.8833
+  frost                  sev=2  acc=0.8389
+  frost                  sev=3  acc=0.7603
+  frost                  sev=4  acc=0.7470
+  frost                  sev=5  acc=0.6559
+                         mean=0.7771
+  fog                    sev=1  acc=0.9187
+  fog                    sev=2  acc=0.9008
+  fog                    sev=3  acc=0.8740
+  fog                    sev=4  acc=0.8351
+  fog                    sev=5  acc=0.6839
+                         mean=0.8425 [LUMINOSITY]
+  brightness             sev=1  acc=0.9185
+  brightness             sev=2  acc=0.9154
+  brightness             sev=3  acc=0.9055
+  brightness             sev=4  acc=0.8941
+  brightness             sev=5  acc=0.8505
+                         mean=0.8968 [LUMINOSITY]
+  spatter                sev=1  acc=0.9026
+  spatter                sev=2  acc=0.8640
+  spatter                sev=3  acc=0.8134
+  spatter                sev=4  acc=0.8421
+  spatter                sev=5  acc=0.7550
+                         mean=0.8354
+  contrast               sev=1  acc=0.9117
+  contrast               sev=2  acc=0.8593
+  contrast               sev=3  acc=0.7937
+  contrast               sev=4  acc=0.6580
+  contrast               sev=5  acc=0.2546
+                         mean=0.6955 [LUMINOSITY]
+  elastic_transform      sev=1  acc=0.8718
+  elastic_transform      sev=2  acc=0.8708
+  elastic_transform      sev=3  acc=0.8280
+  elastic_transform      sev=4  acc=0.7959
+  elastic_transform      sev=5  acc=0.7680
+                         mean=0.8269
+  pixelate               sev=1  acc=0.9020
+  pixelate               sev=2  acc=0.8707
+  pixelate               sev=3  acc=0.8425
+  pixelate               sev=4  acc=0.7408
+  pixelate               sev=5  acc=0.5665
+                         mean=0.7845
+  jpeg_compression       sev=1  acc=0.8610
+  jpeg_compression       sev=2  acc=0.8281
+  jpeg_compression       sev=3  acc=0.8116
+  jpeg_compression       sev=4  acc=0.7965
+  jpeg_compression       sev=5  acc=0.7699
+                         mean=0.8134
+  saturate               sev=1  acc=0.8918
+  saturate               sev=2  acc=0.8619
+  saturate               sev=3  acc=0.9140
+  saturate               sev=4  acc=0.8937
+  saturate               sev=5  acc=0.8718
+                         mean=0.8866
+
+============================================================
+Experiment : exp_grayscale  (colorspace=grayscale)
+Checkpoint : results_v4/exp_grayscale_seed1/best_model.pth
+  gaussian_noise         sev=1  acc=0.6753
+  gaussian_noise         sev=2  acc=0.4951
+  gaussian_noise         sev=3  acc=0.3550
+  gaussian_noise         sev=4  acc=0.3027
+  gaussian_noise         sev=5  acc=0.2628
+                         mean=0.4182
+  shot_noise             sev=1  acc=0.7682
+  shot_noise             sev=2  acc=0.6695
+  shot_noise             sev=3  acc=0.4721
+  shot_noise             sev=4  acc=0.4037
+  shot_noise             sev=5  acc=0.3084
+                         mean=0.5244
+  impulse_noise          sev=1  acc=0.7859
+  impulse_noise          sev=2  acc=0.6615
+  impulse_noise          sev=3  acc=0.5728
+  impulse_noise          sev=4  acc=0.4591
+  impulse_noise          sev=5  acc=0.3738
+                         mean=0.5706
+  speckle_noise          sev=1  acc=0.7789
+  speckle_noise          sev=2  acc=0.6483
+  speckle_noise          sev=3  acc=0.5765
+  speckle_noise          sev=4  acc=0.4580
+  speckle_noise          sev=5  acc=0.3576
+                         mean=0.5639
+  defocus_blur           sev=1  acc=0.9045
+  defocus_blur           sev=2  acc=0.8815
+  defocus_blur           sev=3  acc=0.7934
+  defocus_blur           sev=4  acc=0.6171
+  defocus_blur           sev=5  acc=0.3417
+                         mean=0.7076
+  glass_blur             sev=1  acc=0.4121
+  glass_blur             sev=2  acc=0.4291
+  glass_blur             sev=3  acc=0.4563
+  glass_blur             sev=4  acc=0.3323
+  glass_blur             sev=5  acc=0.3625
+                         mean=0.3985
+  motion_blur            sev=1  acc=0.8166
+  motion_blur            sev=2  acc=0.6879
+  motion_blur            sev=3  acc=0.5605
+  motion_blur            sev=4  acc=0.5648
+  motion_blur            sev=5  acc=0.4672
+                         mean=0.6194
+  zoom_blur              sev=1  acc=0.7815
+  zoom_blur              sev=2  acc=0.7264
+  zoom_blur              sev=3  acc=0.6230
+  zoom_blur              sev=4  acc=0.5302
+  zoom_blur              sev=5  acc=0.4106
+                         mean=0.6143
+  gaussian_blur          sev=1  acc=0.9043
+  gaussian_blur          sev=2  acc=0.7918
+  gaussian_blur          sev=3  acc=0.5933
+  gaussian_blur          sev=4  acc=0.3758
+  gaussian_blur          sev=5  acc=0.1815
+                         mean=0.5693
+  snow                   sev=1  acc=0.7926
+  snow                   sev=2  acc=0.6382
+  snow                   sev=3  acc=0.6936
+  snow                   sev=4  acc=0.6727
+  snow                   sev=5  acc=0.6154
+                         mean=0.6825
+  frost                  sev=1  acc=0.8298
+  frost                  sev=2  acc=0.7457
+  frost                  sev=3  acc=0.6198
+  frost                  sev=4  acc=0.6026
+  frost                  sev=5  acc=0.4949
+                         mean=0.6586
+  fog                    sev=1  acc=0.9028
+  fog                    sev=2  acc=0.8822
+  fog                    sev=3  acc=0.8481
+  fog                    sev=4  acc=0.7910
+  fog                    sev=5  acc=0.5556
+                         mean=0.7959 [LUMINOSITY]
+  brightness             sev=1  acc=0.9044
+  brightness             sev=2  acc=0.8975
+  brightness             sev=3  acc=0.8863
+  brightness             sev=4  acc=0.8739
+  brightness             sev=5  acc=0.8368
+                         mean=0.8798 [LUMINOSITY]
+  spatter                sev=1  acc=0.8556
+  spatter                sev=2  acc=0.7514
+  spatter                sev=3  acc=0.6809
+  spatter                sev=4  acc=0.7832
+  spatter                sev=5  acc=0.6613
+                         mean=0.7465
+  contrast               sev=1  acc=0.9014
+  contrast               sev=2  acc=0.8655
+  contrast               sev=3  acc=0.8300
+  contrast               sev=4  acc=0.7486
+  contrast               sev=5  acc=0.4038
+                         mean=0.7499 [LUMINOSITY]
+  elastic_transform      sev=1  acc=0.8318
+  elastic_transform      sev=2  acc=0.8265
+  elastic_transform      sev=3  acc=0.7675
+  elastic_transform      sev=4  acc=0.6706
+  elastic_transform      sev=5  acc=0.6323
+                         mean=0.7457
+  pixelate               sev=1  acc=0.8619
+  pixelate               sev=2  acc=0.7627
+  pixelate               sev=3  acc=0.6885
+  pixelate               sev=4  acc=0.5076
+  pixelate               sev=5  acc=0.3695
+                         mean=0.6380
+  jpeg_compression       sev=1  acc=0.8335
+  jpeg_compression       sev=2  acc=0.7799
+  jpeg_compression       sev=3  acc=0.7613
+  jpeg_compression       sev=4  acc=0.7340
+  jpeg_compression       sev=5  acc=0.7004
+                         mean=0.7618
+  saturate               sev=1  acc=0.9035
+  saturate               sev=2  acc=0.9031
+  saturate               sev=3  acc=0.9046
+  saturate               sev=4  acc=0.8940
+  saturate               sev=5  acc=0.8761
+                         mean=0.8963
+
+Raw results saved  → results_v4/cifar10c_seed1/results_raw.csv
+Corruption summary → results_v4/cifar10c_seed1/corruption_summary.csv
+Global summary     → results_v4/cifar10c_seed1/summary.json
+
+============================================================
+Experiment              mCA   mCA_lum   mCA_nolum
+------------------------------------------------------------
+baseline_rgb         0.7220  0.8217    0.7033
+exp_lab              0.7232  0.8222    0.7047
+exp_hsv              0.7321  0.8116    0.7172
+exp_grayscale        0.6601  0.8085    0.6322
+============================================================
+Done.
+=== CIFAR-10-C eval seed=2 -> results_v4/cifar10c_seed2 ===
+Device: cuda
+CIFAR-10-C root: data/CIFAR-10-C
+
+============================================================
+Experiment : baseline_rgb  (colorspace=rgb)
+Checkpoint : results_v4/baseline_rgb_seed2/best_model.pth
+  gaussian_noise         sev=1  acc=0.7871
+  gaussian_noise         sev=2  acc=0.6215
+  gaussian_noise         sev=3  acc=0.4350
+  gaussian_noise         sev=4  acc=0.3568
+  gaussian_noise         sev=5  acc=0.2952
+                         mean=0.4991
+  shot_noise             sev=1  acc=0.8489
+  shot_noise             sev=2  acc=0.7666
+  shot_noise             sev=3  acc=0.5739
+  shot_noise             sev=4  acc=0.4891
+  shot_noise             sev=5  acc=0.3625
+                         mean=0.6082
+  impulse_noise          sev=1  acc=0.8446
+  impulse_noise          sev=2  acc=0.7394
+  impulse_noise          sev=3  acc=0.6436
+  impulse_noise          sev=4  acc=0.4322
+  impulse_noise          sev=5  acc=0.2531
+                         mean=0.5826
+  speckle_noise          sev=1  acc=0.8447
+  speckle_noise          sev=2  acc=0.7241
+  speckle_noise          sev=3  acc=0.6563
+  speckle_noise          sev=4  acc=0.5271
+  speckle_noise          sev=5  acc=0.4096
+                         mean=0.6324
+  defocus_blur           sev=1  acc=0.9247
+  defocus_blur           sev=2  acc=0.9128
+  defocus_blur           sev=3  acc=0.8607
+  defocus_blur           sev=4  acc=0.7566
+  defocus_blur           sev=5  acc=0.5385
+                         mean=0.7987
+  glass_blur             sev=1  acc=0.5325
+  glass_blur             sev=2  acc=0.5494
+  glass_blur             sev=3  acc=0.5759
+  glass_blur             sev=4  acc=0.4337
+  glass_blur             sev=5  acc=0.4681
+                         mean=0.5119
+  motion_blur            sev=1  acc=0.8697
+  motion_blur            sev=2  acc=0.7830
+  motion_blur            sev=3  acc=0.6864
+  motion_blur            sev=4  acc=0.6859
+  motion_blur            sev=5  acc=0.6058
+                         mean=0.7262
+  zoom_blur              sev=1  acc=0.8498
+  zoom_blur              sev=2  acc=0.8219
+  zoom_blur              sev=3  acc=0.7597
+  zoom_blur              sev=4  acc=0.6976
+  zoom_blur              sev=5  acc=0.5944
+                         mean=0.7447
+  gaussian_blur          sev=1  acc=0.9249
+  gaussian_blur          sev=2  acc=0.8598
+  gaussian_blur          sev=3  acc=0.7538
+  gaussian_blur          sev=4  acc=0.5990
+  gaussian_blur          sev=5  acc=0.3555
+                         mean=0.6986
+  snow                   sev=1  acc=0.8609
+  snow                   sev=2  acc=0.7522
+  snow                   sev=3  acc=0.7846
+  snow                   sev=4  acc=0.7526
+  snow                   sev=5  acc=0.7039
+                         mean=0.7708
+  frost                  sev=1  acc=0.8780
+  frost                  sev=2  acc=0.8201
+  frost                  sev=3  acc=0.7210
+  frost                  sev=4  acc=0.7017
+  frost                  sev=5  acc=0.5933
+                         mean=0.7428
+  fog                    sev=1  acc=0.9193
+  fog                    sev=2  acc=0.9018
+  fog                    sev=3  acc=0.8748
+  fog                    sev=4  acc=0.8322
+  fog                    sev=5  acc=0.6571
+                         mean=0.8370 [LUMINOSITY]
+  brightness             sev=1  acc=0.9241
+  brightness             sev=2  acc=0.9176
+  brightness             sev=3  acc=0.9071
+  brightness             sev=4  acc=0.8958
+  brightness             sev=5  acc=0.8656
+                         mean=0.9020 [LUMINOSITY]
+  spatter                sev=1  acc=0.8990
+  spatter                sev=2  acc=0.8397
+  spatter                sev=3  acc=0.7966
+  spatter                sev=4  acc=0.8324
+  spatter                sev=5  acc=0.7303
+                         mean=0.8196
+  contrast               sev=1  acc=0.9183
+  contrast               sev=2  acc=0.8672
+  contrast               sev=3  acc=0.8103
+  contrast               sev=4  acc=0.7031
+  contrast               sev=5  acc=0.3133
+                         mean=0.7224 [LUMINOSITY]
+  elastic_transform      sev=1  acc=0.8768
+  elastic_transform      sev=2  acc=0.8733
+  elastic_transform      sev=3  acc=0.8414
+  elastic_transform      sev=4  acc=0.7872
+  elastic_transform      sev=5  acc=0.7463
+                         mean=0.8250
+  pixelate               sev=1  acc=0.8986
+  pixelate               sev=2  acc=0.8439
+  pixelate               sev=3  acc=0.7990
+  pixelate               sev=4  acc=0.6505
+  pixelate               sev=5  acc=0.4665
+                         mean=0.7317
+  jpeg_compression       sev=1  acc=0.8570
+  jpeg_compression       sev=2  acc=0.8169
+  jpeg_compression       sev=3  acc=0.8019
+  jpeg_compression       sev=4  acc=0.7813
+  jpeg_compression       sev=5  acc=0.7554
+                         mean=0.8025
+  saturate               sev=1  acc=0.9006
+  saturate               sev=2  acc=0.8791
+  saturate               sev=3  acc=0.9176
+  saturate               sev=4  acc=0.8811
+  saturate               sev=5  acc=0.8268
+                         mean=0.8810
+
+============================================================
+Experiment : exp_lab  (colorspace=lab)
+Checkpoint : results_v4/exp_lab_seed2/best_model.pth
+  gaussian_noise         sev=1  acc=0.7184
+  gaussian_noise         sev=2  acc=0.4776
+  gaussian_noise         sev=3  acc=0.3178
+  gaussian_noise         sev=4  acc=0.2674
+  gaussian_noise         sev=5  acc=0.2363
+                         mean=0.4035
+  shot_noise             sev=1  acc=0.8158
+  shot_noise             sev=2  acc=0.6892
+  shot_noise             sev=3  acc=0.4437
+  shot_noise             sev=4  acc=0.3729
+  shot_noise             sev=5  acc=0.2861
+                         mean=0.5215
+  impulse_noise          sev=1  acc=0.8389
+  impulse_noise          sev=2  acc=0.7337
+  impulse_noise          sev=3  acc=0.6271
+  impulse_noise          sev=4  acc=0.4290
+  impulse_noise          sev=5  acc=0.2851
+                         mean=0.5828
+  speckle_noise          sev=1  acc=0.8162
+  speckle_noise          sev=2  acc=0.6483
+  speckle_noise          sev=3  acc=0.5692
+  speckle_noise          sev=4  acc=0.4438
+  speckle_noise          sev=5  acc=0.3522
+                         mean=0.5659
+  defocus_blur           sev=1  acc=0.9245
+  defocus_blur           sev=2  acc=0.9005
+  defocus_blur           sev=3  acc=0.8447
+  defocus_blur           sev=4  acc=0.7343
+  defocus_blur           sev=5  acc=0.5485
+                         mean=0.7905
+  glass_blur             sev=1  acc=0.5399
+  glass_blur             sev=2  acc=0.5624
+  glass_blur             sev=3  acc=0.6041
+  glass_blur             sev=4  acc=0.4465
+  glass_blur             sev=5  acc=0.4770
+                         mean=0.5260
+  motion_blur            sev=1  acc=0.8577
+  motion_blur            sev=2  acc=0.7675
+  motion_blur            sev=3  acc=0.6764
+  motion_blur            sev=4  acc=0.6793
+  motion_blur            sev=5  acc=0.6024
+                         mean=0.7167
+  zoom_blur              sev=1  acc=0.8399
+  zoom_blur              sev=2  acc=0.8054
+  zoom_blur              sev=3  acc=0.7451
+  zoom_blur              sev=4  acc=0.6846
+  zoom_blur              sev=5  acc=0.5940
+                         mean=0.7338
+  gaussian_blur          sev=1  acc=0.9243
+  gaussian_blur          sev=2  acc=0.8424
+  gaussian_blur          sev=3  acc=0.7318
+  gaussian_blur          sev=4  acc=0.5855
+  gaussian_blur          sev=5  acc=0.3757
+                         mean=0.6919
+  snow                   sev=1  acc=0.8683
+  snow                   sev=2  acc=0.7685
+  snow                   sev=3  acc=0.7941
+  snow                   sev=4  acc=0.7610
+  snow                   sev=5  acc=0.7061
+                         mean=0.7796
+  frost                  sev=1  acc=0.8809
+  frost                  sev=2  acc=0.8250
+  frost                  sev=3  acc=0.7316
+  frost                  sev=4  acc=0.7168
+  frost                  sev=5  acc=0.6136
+                         mean=0.7536
+  fog                    sev=1  acc=0.9202
+  fog                    sev=2  acc=0.8993
+  fog                    sev=3  acc=0.8726
+  fog                    sev=4  acc=0.8270
+  fog                    sev=5  acc=0.6670
+                         mean=0.8372 [LUMINOSITY]
+  brightness             sev=1  acc=0.9234
+  brightness             sev=2  acc=0.9171
+  brightness             sev=3  acc=0.9070
+  brightness             sev=4  acc=0.8945
+  brightness             sev=5  acc=0.8617
+                         mean=0.9007 [LUMINOSITY]
+  spatter                sev=1  acc=0.8980
+  spatter                sev=2  acc=0.8575
+  spatter                sev=3  acc=0.8041
+  spatter                sev=4  acc=0.8433
+  spatter                sev=5  acc=0.7550
+                         mean=0.8316
+  contrast               sev=1  acc=0.9142
+  contrast               sev=2  acc=0.8630
+  contrast               sev=3  acc=0.8041
+  contrast               sev=4  acc=0.6717
+  contrast               sev=5  acc=0.2986
+                         mean=0.7103 [LUMINOSITY]
+  elastic_transform      sev=1  acc=0.8737
+  elastic_transform      sev=2  acc=0.8639
+  elastic_transform      sev=3  acc=0.8266
+  elastic_transform      sev=4  acc=0.7688
+  elastic_transform      sev=5  acc=0.7388
+                         mean=0.8144
+  pixelate               sev=1  acc=0.9035
+  pixelate               sev=2  acc=0.8611
+  pixelate               sev=3  acc=0.8257
+  pixelate               sev=4  acc=0.6889
+  pixelate               sev=5  acc=0.4879
+                         mean=0.7534
+  jpeg_compression       sev=1  acc=0.8509
+  jpeg_compression       sev=2  acc=0.8096
+  jpeg_compression       sev=3  acc=0.7920
+  jpeg_compression       sev=4  acc=0.7770
+  jpeg_compression       sev=5  acc=0.7449
+                         mean=0.7949
+  saturate               sev=1  acc=0.8884
+  saturate               sev=2  acc=0.8567
+  saturate               sev=3  acc=0.9138
+  saturate               sev=4  acc=0.8767
+  saturate               sev=5  acc=0.8176
+                         mean=0.8706
+
+============================================================
+Experiment : exp_hsv  (colorspace=hsv)
+Checkpoint : results_v4/exp_hsv_seed2/best_model.pth
+  gaussian_noise         sev=1  acc=0.7466
+  gaussian_noise         sev=2  acc=0.5786
+  gaussian_noise         sev=3  acc=0.4189
+  gaussian_noise         sev=4  acc=0.3534
+  gaussian_noise         sev=5  acc=0.3036
+                         mean=0.4802
+  shot_noise             sev=1  acc=0.8201
+  shot_noise             sev=2  acc=0.7305
+  shot_noise             sev=3  acc=0.5236
+  shot_noise             sev=4  acc=0.4436
+  shot_noise             sev=5  acc=0.3364
+                         mean=0.5708
+  impulse_noise          sev=1  acc=0.8394
+  impulse_noise          sev=2  acc=0.7317
+  impulse_noise          sev=3  acc=0.6087
+  impulse_noise          sev=4  acc=0.3700
+  impulse_noise          sev=5  acc=0.2432
+                         mean=0.5586
+  speckle_noise          sev=1  acc=0.8172
+  speckle_noise          sev=2  acc=0.6870
+  speckle_noise          sev=3  acc=0.6121
+  speckle_noise          sev=4  acc=0.4867
+  speckle_noise          sev=5  acc=0.3841
+                         mean=0.5974
+  defocus_blur           sev=1  acc=0.9166
+  defocus_blur           sev=2  acc=0.8985
+  defocus_blur           sev=3  acc=0.8419
+  defocus_blur           sev=4  acc=0.7257
+  defocus_blur           sev=5  acc=0.5603
+                         mean=0.7886
+  glass_blur             sev=1  acc=0.5945
+  glass_blur             sev=2  acc=0.6083
+  glass_blur             sev=3  acc=0.6382
+  glass_blur             sev=4  acc=0.4746
+  glass_blur             sev=5  acc=0.5127
+                         mean=0.5657
+  motion_blur            sev=1  acc=0.8591
+  motion_blur            sev=2  acc=0.7754
+  motion_blur            sev=3  acc=0.6862
+  motion_blur            sev=4  acc=0.6876
+  motion_blur            sev=5  acc=0.6091
+                         mean=0.7235
+  zoom_blur              sev=1  acc=0.8290
+  zoom_blur              sev=2  acc=0.7987
+  zoom_blur              sev=3  acc=0.7379
+  zoom_blur              sev=4  acc=0.6850
+  zoom_blur              sev=5  acc=0.6039
+                         mean=0.7309
+  gaussian_blur          sev=1  acc=0.9167
+  gaussian_blur          sev=2  acc=0.8406
+  gaussian_blur          sev=3  acc=0.7255
+  gaussian_blur          sev=4  acc=0.5898
+  gaussian_blur          sev=5  acc=0.3851
+                         mean=0.6915
+  snow                   sev=1  acc=0.8721
+  snow                   sev=2  acc=0.7706
+  snow                   sev=3  acc=0.8013
+  snow                   sev=4  acc=0.7678
+  snow                   sev=5  acc=0.7240
+                         mean=0.7872
+  frost                  sev=1  acc=0.8759
+  frost                  sev=2  acc=0.8284
+  frost                  sev=3  acc=0.7464
+  frost                  sev=4  acc=0.7277
+  frost                  sev=5  acc=0.6313
+                         mean=0.7619
+  fog                    sev=1  acc=0.9124
+  fog                    sev=2  acc=0.8952
+  fog                    sev=3  acc=0.8700
+  fog                    sev=4  acc=0.8299
+  fog                    sev=5  acc=0.6910
+                         mean=0.8397 [LUMINOSITY]
+  brightness             sev=1  acc=0.9185
+  brightness             sev=2  acc=0.9134
+  brightness             sev=3  acc=0.9057
+  brightness             sev=4  acc=0.8925
+  brightness             sev=5  acc=0.8638
+                         mean=0.8988 [LUMINOSITY]
+  spatter                sev=1  acc=0.9006
+  spatter                sev=2  acc=0.8670
+  spatter                sev=3  acc=0.8197
+  spatter                sev=4  acc=0.8430
+  spatter                sev=5  acc=0.7616
+                         mean=0.8384
+  contrast               sev=1  acc=0.9087
+  contrast               sev=2  acc=0.8533
+  contrast               sev=3  acc=0.7934
+  contrast               sev=4  acc=0.6664
+  contrast               sev=5  acc=0.2866
+                         mean=0.7017 [LUMINOSITY]
+  elastic_transform      sev=1  acc=0.8638
+  elastic_transform      sev=2  acc=0.8653
+  elastic_transform      sev=3  acc=0.8197
+  elastic_transform      sev=4  acc=0.7746
+  elastic_transform      sev=5  acc=0.7542
+                         mean=0.8155
+  pixelate               sev=1  acc=0.8990
+  pixelate               sev=2  acc=0.8571
+  pixelate               sev=3  acc=0.8176
+  pixelate               sev=4  acc=0.6868
+  pixelate               sev=5  acc=0.5109
+                         mean=0.7543
+  jpeg_compression       sev=1  acc=0.8605
+  jpeg_compression       sev=2  acc=0.8229
+  jpeg_compression       sev=3  acc=0.8019
+  jpeg_compression       sev=4  acc=0.7871
+  jpeg_compression       sev=5  acc=0.7598
+                         mean=0.8064
+  saturate               sev=1  acc=0.8900
+  saturate               sev=2  acc=0.8601
+  saturate               sev=3  acc=0.9114
+  saturate               sev=4  acc=0.8952
+  saturate               sev=5  acc=0.8789
+                         mean=0.8871
+
+============================================================
+Experiment : exp_grayscale  (colorspace=grayscale)
+Checkpoint : results_v4/exp_grayscale_seed2/best_model.pth
+  gaussian_noise         sev=1  acc=0.6835
+  gaussian_noise         sev=2  acc=0.4869
+  gaussian_noise         sev=3  acc=0.3273
+  gaussian_noise         sev=4  acc=0.2747
+  gaussian_noise         sev=5  acc=0.2352
+                         mean=0.4015
+  shot_noise             sev=1  acc=0.7787
+  shot_noise             sev=2  acc=0.6728
+  shot_noise             sev=3  acc=0.4574
+  shot_noise             sev=4  acc=0.3778
+  shot_noise             sev=5  acc=0.2835
+                         mean=0.5140
+  impulse_noise          sev=1  acc=0.7989
+  impulse_noise          sev=2  acc=0.6907
+  impulse_noise          sev=3  acc=0.6081
+  impulse_noise          sev=4  acc=0.4734
+  impulse_noise          sev=5  acc=0.3314
+                         mean=0.5805
+  speckle_noise          sev=1  acc=0.7788
+  speckle_noise          sev=2  acc=0.6330
+  speckle_noise          sev=3  acc=0.5605
+  speckle_noise          sev=4  acc=0.4370
+  speckle_noise          sev=5  acc=0.3346
+                         mean=0.5488
+  defocus_blur           sev=1  acc=0.9027
+  defocus_blur           sev=2  acc=0.8715
+  defocus_blur           sev=3  acc=0.7661
+  defocus_blur           sev=4  acc=0.5458
+  defocus_blur           sev=5  acc=0.2898
+                         mean=0.6752
+  glass_blur             sev=1  acc=0.4057
+  glass_blur             sev=2  acc=0.4311
+  glass_blur             sev=3  acc=0.4671
+  glass_blur             sev=4  acc=0.3308
+  glass_blur             sev=5  acc=0.3727
+                         mean=0.4015
+  motion_blur            sev=1  acc=0.7964
+  motion_blur            sev=2  acc=0.6518
+  motion_blur            sev=3  acc=0.5242
+  motion_blur            sev=4  acc=0.5257
+  motion_blur            sev=5  acc=0.4321
+                         mean=0.5860
+  zoom_blur              sev=1  acc=0.7451
+  zoom_blur              sev=2  acc=0.6661
+  zoom_blur              sev=3  acc=0.5454
+  zoom_blur              sev=4  acc=0.4511
+  zoom_blur              sev=5  acc=0.3347
+                         mean=0.5485
+  gaussian_blur          sev=1  acc=0.9028
+  gaussian_blur          sev=2  acc=0.7646
+  gaussian_blur          sev=3  acc=0.5287
+  gaussian_blur          sev=4  acc=0.3035
+  gaussian_blur          sev=5  acc=0.1530
+                         mean=0.5305
+  snow                   sev=1  acc=0.8179
+  snow                   sev=2  acc=0.6757
+  snow                   sev=3  acc=0.7180
+  snow                   sev=4  acc=0.6853
+  snow                   sev=5  acc=0.6419
+                         mean=0.7078
+  frost                  sev=1  acc=0.8320
+  frost                  sev=2  acc=0.7609
+  frost                  sev=3  acc=0.6469
+  frost                  sev=4  acc=0.6242
+  frost                  sev=5  acc=0.5139
+                         mean=0.6756
+  fog                    sev=1  acc=0.9001
+  fog                    sev=2  acc=0.8781
+  fog                    sev=3  acc=0.8426
+  fog                    sev=4  acc=0.7844
+  fog                    sev=5  acc=0.5703
+                         mean=0.7951 [LUMINOSITY]
+  brightness             sev=1  acc=0.9037
+  brightness             sev=2  acc=0.8986
+  brightness             sev=3  acc=0.8907
+  brightness             sev=4  acc=0.8760
+  brightness             sev=5  acc=0.8415
+                         mean=0.8821 [LUMINOSITY]
+  spatter                sev=1  acc=0.8598
+  spatter                sev=2  acc=0.7722
+  spatter                sev=3  acc=0.7016
+  spatter                sev=4  acc=0.7930
+  spatter                sev=5  acc=0.6759
+                         mean=0.7605
+  contrast               sev=1  acc=0.8974
+  contrast               sev=2  acc=0.8578
+  contrast               sev=3  acc=0.8177
+  contrast               sev=4  acc=0.7282
+  contrast               sev=5  acc=0.3794
+                         mean=0.7361 [LUMINOSITY]
+  elastic_transform      sev=1  acc=0.8177
+  elastic_transform      sev=2  acc=0.8120
+  elastic_transform      sev=3  acc=0.7328
+  elastic_transform      sev=4  acc=0.6406
+  elastic_transform      sev=5  acc=0.6287
+                         mean=0.7264
+  pixelate               sev=1  acc=0.8628
+  pixelate               sev=2  acc=0.7610
+  pixelate               sev=3  acc=0.6817
+  pixelate               sev=4  acc=0.4769
+  pixelate               sev=5  acc=0.3163
+                         mean=0.6197
+  jpeg_compression       sev=1  acc=0.8369
+  jpeg_compression       sev=2  acc=0.7853
+  jpeg_compression       sev=3  acc=0.7634
+  jpeg_compression       sev=4  acc=0.7358
+  jpeg_compression       sev=5  acc=0.7011
+                         mean=0.7645
+  saturate               sev=1  acc=0.9049
+  saturate               sev=2  acc=0.9012
+  saturate               sev=3  acc=0.9027
+  saturate               sev=4  acc=0.8910
+  saturate               sev=5  acc=0.8729
+                         mean=0.8945
+
+Raw results saved  → results_v4/cifar10c_seed2/results_raw.csv
+Corruption summary → results_v4/cifar10c_seed2/corruption_summary.csv
+Global summary     → results_v4/cifar10c_seed2/summary.json
+
+============================================================
+Experiment              mCA   mCA_lum   mCA_nolum
+------------------------------------------------------------
+baseline_rgb         0.7283  0.8205    0.7110
+exp_lab              0.7147  0.8161    0.6957
+exp_hsv              0.7262  0.8134    0.7099
+exp_grayscale        0.6499  0.8044    0.6210
+============================================================
+Done.
+=== CIFAR-10-C eval seed=3 -> results_v4/cifar10c_seed3 ===
+Device: cuda
+CIFAR-10-C root: data/CIFAR-10-C
+
+============================================================
+Experiment : baseline_rgb  (colorspace=rgb)
+Checkpoint : results_v4/baseline_rgb_seed3/best_model.pth
+  gaussian_noise         sev=1  acc=0.7657
+  gaussian_noise         sev=2  acc=0.5680
+  gaussian_noise         sev=3  acc=0.3791
+  gaussian_noise         sev=4  acc=0.3064
+  gaussian_noise         sev=5  acc=0.2549
+                         mean=0.4548
+  shot_noise             sev=1  acc=0.8311
+  shot_noise             sev=2  acc=0.7372
+  shot_noise             sev=3  acc=0.5206
+  shot_noise             sev=4  acc=0.4382
+  shot_noise             sev=5  acc=0.3193
+                         mean=0.5693
+  impulse_noise          sev=1  acc=0.8511
+  impulse_noise          sev=2  acc=0.7592
+  impulse_noise          sev=3  acc=0.6507
+  impulse_noise          sev=4  acc=0.3834
+  impulse_noise          sev=5  acc=0.1890
+                         mean=0.5667
+  speckle_noise          sev=1  acc=0.8299
+  speckle_noise          sev=2  acc=0.6898
+  speckle_noise          sev=3  acc=0.6187
+  speckle_noise          sev=4  acc=0.4861
+  speckle_noise          sev=5  acc=0.3785
+                         mean=0.6006
+  defocus_blur           sev=1  acc=0.9219
+  defocus_blur           sev=2  acc=0.9006
+  defocus_blur           sev=3  acc=0.8292
+  defocus_blur           sev=4  acc=0.6928
+  defocus_blur           sev=5  acc=0.4474
+                         mean=0.7584
+  glass_blur             sev=1  acc=0.5201
+  glass_blur             sev=2  acc=0.5413
+  glass_blur             sev=3  acc=0.5859
+  glass_blur             sev=4  acc=0.4244
+  glass_blur             sev=5  acc=0.4692
+                         mean=0.5082
+  motion_blur            sev=1  acc=0.8509
+  motion_blur            sev=2  acc=0.7442
+  motion_blur            sev=3  acc=0.6457
+  motion_blur            sev=4  acc=0.6498
+  motion_blur            sev=5  acc=0.5557
+                         mean=0.6893
+  zoom_blur              sev=1  acc=0.8198
+  zoom_blur              sev=2  acc=0.7799
+  zoom_blur              sev=3  acc=0.7049
+  zoom_blur              sev=4  acc=0.6391
+  zoom_blur              sev=5  acc=0.5267
+                         mean=0.6941
+  gaussian_blur          sev=1  acc=0.9216
+  gaussian_blur          sev=2  acc=0.8260
+  gaussian_blur          sev=3  acc=0.6815
+  gaussian_blur          sev=4  acc=0.4971
+  gaussian_blur          sev=5  acc=0.2702
+                         mean=0.6393
+  snow                   sev=1  acc=0.8716
+  snow                   sev=2  acc=0.7666
+  snow                   sev=3  acc=0.8014
+  snow                   sev=4  acc=0.7656
+  snow                   sev=5  acc=0.7010
+                         mean=0.7812
+  frost                  sev=1  acc=0.8761
+  frost                  sev=2  acc=0.8145
+  frost                  sev=3  acc=0.7052
+  frost                  sev=4  acc=0.6872
+  frost                  sev=5  acc=0.5644
+                         mean=0.7295
+  fog                    sev=1  acc=0.9202
+  fog                    sev=2  acc=0.9021
+  fog                    sev=3  acc=0.8697
+  fog                    sev=4  acc=0.8228
+  fog                    sev=5  acc=0.6284
+                         mean=0.8286 [LUMINOSITY]
+  brightness             sev=1  acc=0.9216
+  brightness             sev=2  acc=0.9187
+  brightness             sev=3  acc=0.9095
+  brightness             sev=4  acc=0.8992
+  brightness             sev=5  acc=0.8659
+                         mean=0.9030 [LUMINOSITY]
+  spatter                sev=1  acc=0.9019
+  spatter                sev=2  acc=0.8531
+  spatter                sev=3  acc=0.8131
+  spatter                sev=4  acc=0.8364
+  spatter                sev=5  acc=0.7430
+                         mean=0.8295
+  contrast               sev=1  acc=0.9160
+  contrast               sev=2  acc=0.8650
+  contrast               sev=3  acc=0.8089
+  contrast               sev=4  acc=0.6738
+  contrast               sev=5  acc=0.2330
+                         mean=0.6993 [LUMINOSITY]
+  elastic_transform      sev=1  acc=0.8682
+  elastic_transform      sev=2  acc=0.8587
+  elastic_transform      sev=3  acc=0.8111
+  elastic_transform      sev=4  acc=0.7512
+  elastic_transform      sev=5  acc=0.7308
+                         mean=0.8040
+  pixelate               sev=1  acc=0.9003
+  pixelate               sev=2  acc=0.8497
+  pixelate               sev=3  acc=0.8066
+  pixelate               sev=4  acc=0.6470
+  pixelate               sev=5  acc=0.4733
+                         mean=0.7354
+  jpeg_compression       sev=1  acc=0.8555
+  jpeg_compression       sev=2  acc=0.8222
+  jpeg_compression       sev=3  acc=0.8033
+  jpeg_compression       sev=4  acc=0.7809
+  jpeg_compression       sev=5  acc=0.7522
+                         mean=0.8028
+  saturate               sev=1  acc=0.8965
+  saturate               sev=2  acc=0.8714
+  saturate               sev=3  acc=0.9147
+  saturate               sev=4  acc=0.8794
+  saturate               sev=5  acc=0.8243
+                         mean=0.8773
+
+============================================================
+Experiment : exp_lab  (colorspace=lab)
+Checkpoint : results_v4/exp_lab_seed3/best_model.pth
+  gaussian_noise         sev=1  acc=0.7128
+  gaussian_noise         sev=2  acc=0.4568
+  gaussian_noise         sev=3  acc=0.2716
+  gaussian_noise         sev=4  acc=0.2233
+  gaussian_noise         sev=5  acc=0.1878
+                         mean=0.3705
+  shot_noise             sev=1  acc=0.8150
+  shot_noise             sev=2  acc=0.6888
+  shot_noise             sev=3  acc=0.4058
+  shot_noise             sev=4  acc=0.3201
+  shot_noise             sev=5  acc=0.2265
+                         mean=0.4912
+  impulse_noise          sev=1  acc=0.8359
+  impulse_noise          sev=2  acc=0.7275
+  impulse_noise          sev=3  acc=0.6207
+  impulse_noise          sev=4  acc=0.4041
+  impulse_noise          sev=5  acc=0.2385
+                         mean=0.5653
+  speckle_noise          sev=1  acc=0.8157
+  speckle_noise          sev=2  acc=0.6350
+  speckle_noise          sev=3  acc=0.5421
+  speckle_noise          sev=4  acc=0.3854
+  speckle_noise          sev=5  acc=0.2866
+                         mean=0.5330
+  defocus_blur           sev=1  acc=0.9311
+  defocus_blur           sev=2  acc=0.9121
+  defocus_blur           sev=3  acc=0.8621
+  defocus_blur           sev=4  acc=0.7674
+  defocus_blur           sev=5  acc=0.5631
+                         mean=0.8072
+  glass_blur             sev=1  acc=0.5310
+  glass_blur             sev=2  acc=0.5485
+  glass_blur             sev=3  acc=0.5924
+  glass_blur             sev=4  acc=0.4330
+  glass_blur             sev=5  acc=0.4689
+                         mean=0.5148
+  motion_blur            sev=1  acc=0.8787
+  motion_blur            sev=2  acc=0.8009
+  motion_blur            sev=3  acc=0.7168
+  motion_blur            sev=4  acc=0.7184
+  motion_blur            sev=5  acc=0.6363
+                         mean=0.7502
+  zoom_blur              sev=1  acc=0.8497
+  zoom_blur              sev=2  acc=0.8243
+  zoom_blur              sev=3  acc=0.7737
+  zoom_blur              sev=4  acc=0.7209
+  zoom_blur              sev=5  acc=0.6312
+                         mean=0.7600
+  gaussian_blur          sev=1  acc=0.9310
+  gaussian_blur          sev=2  acc=0.8618
+  gaussian_blur          sev=3  acc=0.7578
+  gaussian_blur          sev=4  acc=0.6266
+  gaussian_blur          sev=5  acc=0.3938
+                         mean=0.7142
+  snow                   sev=1  acc=0.8711
+  snow                   sev=2  acc=0.7685
+  snow                   sev=3  acc=0.8008
+  snow                   sev=4  acc=0.7709
+  snow                   sev=5  acc=0.7191
+                         mean=0.7861
+  frost                  sev=1  acc=0.8881
+  frost                  sev=2  acc=0.8315
+  frost                  sev=3  acc=0.7367
+  frost                  sev=4  acc=0.7209
+  frost                  sev=5  acc=0.6209
+                         mean=0.7596
+  fog                    sev=1  acc=0.9285
+  fog                    sev=2  acc=0.9100
+  fog                    sev=3  acc=0.8877
+  fog                    sev=4  acc=0.8447
+  fog                    sev=5  acc=0.6740
+                         mean=0.8490 [LUMINOSITY]
+  brightness             sev=1  acc=0.9308
+  brightness             sev=2  acc=0.9239
+  brightness             sev=3  acc=0.9173
+  brightness             sev=4  acc=0.9074
+  brightness             sev=5  acc=0.8742
+                         mean=0.9107 [LUMINOSITY]
+  spatter                sev=1  acc=0.9033
+  spatter                sev=2  acc=0.8441
+  spatter                sev=3  acc=0.8002
+  spatter                sev=4  acc=0.8425
+  spatter                sev=5  acc=0.7526
+                         mean=0.8285
+  contrast               sev=1  acc=0.9246
+  contrast               sev=2  acc=0.8801
+  contrast               sev=3  acc=0.8175
+  contrast               sev=4  acc=0.6804
+  contrast               sev=5  acc=0.2379
+                         mean=0.7081 [LUMINOSITY]
+  elastic_transform      sev=1  acc=0.8803
+  elastic_transform      sev=2  acc=0.8737
+  elastic_transform      sev=3  acc=0.8376
+  elastic_transform      sev=4  acc=0.7876
+  elastic_transform      sev=5  acc=0.7497
+                         mean=0.8258
+  pixelate               sev=1  acc=0.9053
+  pixelate               sev=2  acc=0.8631
+  pixelate               sev=3  acc=0.8248
+  pixelate               sev=4  acc=0.6730
+  pixelate               sev=5  acc=0.5033
+                         mean=0.7539
+  jpeg_compression       sev=1  acc=0.8457
+  jpeg_compression       sev=2  acc=0.7998
+  jpeg_compression       sev=3  acc=0.7817
+  jpeg_compression       sev=4  acc=0.7611
+  jpeg_compression       sev=5  acc=0.7329
+                         mean=0.7842
+  saturate               sev=1  acc=0.9041
+  saturate               sev=2  acc=0.8766
+  saturate               sev=3  acc=0.9224
+  saturate               sev=4  acc=0.8899
+  saturate               sev=5  acc=0.8360
+                         mean=0.8858
+
+============================================================
+Experiment : exp_hsv  (colorspace=hsv)
+Checkpoint : results_v4/exp_hsv_seed3/best_model.pth
+  gaussian_noise         sev=1  acc=0.7792
+  gaussian_noise         sev=2  acc=0.6367
+  gaussian_noise         sev=3  acc=0.4897
+  gaussian_noise         sev=4  acc=0.4266
+  gaussian_noise         sev=5  acc=0.3643
+                         mean=0.5393
+  shot_noise             sev=1  acc=0.8425
+  shot_noise             sev=2  acc=0.7684
+  shot_noise             sev=3  acc=0.5874
+  shot_noise             sev=4  acc=0.5038
+  shot_noise             sev=5  acc=0.3932
+                         mean=0.6191
+  impulse_noise          sev=1  acc=0.8486
+  impulse_noise          sev=2  acc=0.7553
+  impulse_noise          sev=3  acc=0.6488
+  impulse_noise          sev=4  acc=0.4396
+  impulse_noise          sev=5  acc=0.2922
+                         mean=0.5969
+  speckle_noise          sev=1  acc=0.8441
+  speckle_noise          sev=2  acc=0.7344
+  speckle_noise          sev=3  acc=0.6643
+  speckle_noise          sev=4  acc=0.5429
+  speckle_noise          sev=5  acc=0.4384
+                         mean=0.6448
+  defocus_blur           sev=1  acc=0.9182
+  defocus_blur           sev=2  acc=0.8984
+  defocus_blur           sev=3  acc=0.8365
+  defocus_blur           sev=4  acc=0.7150
+  defocus_blur           sev=5  acc=0.5251
+                         mean=0.7786
+  glass_blur             sev=1  acc=0.6179
+  glass_blur             sev=2  acc=0.6249
+  glass_blur             sev=3  acc=0.6663
+  glass_blur             sev=4  acc=0.4866
+  glass_blur             sev=5  acc=0.5288
+                         mean=0.5849
+  motion_blur            sev=1  acc=0.8600
+  motion_blur            sev=2  acc=0.7642
+  motion_blur            sev=3  acc=0.6661
+  motion_blur            sev=4  acc=0.6649
+  motion_blur            sev=5  acc=0.5816
+                         mean=0.7074
+  zoom_blur              sev=1  acc=0.8257
+  zoom_blur              sev=2  acc=0.7970
+  zoom_blur              sev=3  acc=0.7392
+  zoom_blur              sev=4  acc=0.6834
+  zoom_blur              sev=5  acc=0.5955
+                         mean=0.7282
+  gaussian_blur          sev=1  acc=0.9180
+  gaussian_blur          sev=2  acc=0.8328
+  gaussian_blur          sev=3  acc=0.7168
+  gaussian_blur          sev=4  acc=0.5792
+  gaussian_blur          sev=5  acc=0.3915
+                         mean=0.6877
+  snow                   sev=1  acc=0.8716
+  snow                   sev=2  acc=0.7908
+  snow                   sev=3  acc=0.8059
+  snow                   sev=4  acc=0.7833
+  snow                   sev=5  acc=0.7399
+                         mean=0.7983
+  frost                  sev=1  acc=0.8848
+  frost                  sev=2  acc=0.8399
+  frost                  sev=3  acc=0.7618
+  frost                  sev=4  acc=0.7531
+  frost                  sev=5  acc=0.6621
+                         mean=0.7803
+  fog                    sev=1  acc=0.9152
+  fog                    sev=2  acc=0.8983
+  fog                    sev=3  acc=0.8674
+  fog                    sev=4  acc=0.8270
+  fog                    sev=5  acc=0.6845
+                         mean=0.8385 [LUMINOSITY]
+  brightness             sev=1  acc=0.9200
+  brightness             sev=2  acc=0.9143
+  brightness             sev=3  acc=0.9065
+  brightness             sev=4  acc=0.8937
+  brightness             sev=5  acc=0.8561
+                         mean=0.8981 [LUMINOSITY]
+  spatter                sev=1  acc=0.9064
+  spatter                sev=2  acc=0.8680
+  spatter                sev=3  acc=0.8251
+  spatter                sev=4  acc=0.8456
+  spatter                sev=5  acc=0.7652
+                         mean=0.8421
+  contrast               sev=1  acc=0.9128
+  contrast               sev=2  acc=0.8519
+  contrast               sev=3  acc=0.7829
+  contrast               sev=4  acc=0.6435
+  contrast               sev=5  acc=0.2661
+                         mean=0.6914 [LUMINOSITY]
+  elastic_transform      sev=1  acc=0.8704
+  elastic_transform      sev=2  acc=0.8614
+  elastic_transform      sev=3  acc=0.8186
+  elastic_transform      sev=4  acc=0.7701
+  elastic_transform      sev=5  acc=0.7572
+                         mean=0.8155
+  pixelate               sev=1  acc=0.9033
+  pixelate               sev=2  acc=0.8677
+  pixelate               sev=3  acc=0.8360
+  pixelate               sev=4  acc=0.7282
+  pixelate               sev=5  acc=0.5605
+                         mean=0.7791
+  jpeg_compression       sev=1  acc=0.8663
+  jpeg_compression       sev=2  acc=0.8268
+  jpeg_compression       sev=3  acc=0.8137
+  jpeg_compression       sev=4  acc=0.7994
+  jpeg_compression       sev=5  acc=0.7713
+                         mean=0.8155
+  saturate               sev=1  acc=0.8886
+  saturate               sev=2  acc=0.8577
+  saturate               sev=3  acc=0.9132
+  saturate               sev=4  acc=0.8970
+  saturate               sev=5  acc=0.8800
+                         mean=0.8873
+
+============================================================
+Experiment : exp_grayscale  (colorspace=grayscale)
+Checkpoint : results_v4/exp_grayscale_seed3/best_model.pth
+  gaussian_noise         sev=1  acc=0.6770
+  gaussian_noise         sev=2  acc=0.4967
+  gaussian_noise         sev=3  acc=0.3465
+  gaussian_noise         sev=4  acc=0.2935
+  gaussian_noise         sev=5  acc=0.2528
+                         mean=0.4133
+  shot_noise             sev=1  acc=0.7704
+  shot_noise             sev=2  acc=0.6713
+  shot_noise             sev=3  acc=0.4591
+  shot_noise             sev=4  acc=0.3950
+  shot_noise             sev=5  acc=0.2948
+                         mean=0.5181
+  impulse_noise          sev=1  acc=0.7951
+  impulse_noise          sev=2  acc=0.6790
+  impulse_noise          sev=3  acc=0.6040
+  impulse_noise          sev=4  acc=0.4762
+  impulse_noise          sev=5  acc=0.3194
+                         mean=0.5747
+  speckle_noise          sev=1  acc=0.7698
+  speckle_noise          sev=2  acc=0.6360
+  speckle_noise          sev=3  acc=0.5632
+  speckle_noise          sev=4  acc=0.4421
+  speckle_noise          sev=5  acc=0.3416
+                         mean=0.5505
+  defocus_blur           sev=1  acc=0.9076
+  defocus_blur           sev=2  acc=0.8821
+  defocus_blur           sev=3  acc=0.7741
+  defocus_blur           sev=4  acc=0.5560
+  defocus_blur           sev=5  acc=0.2725
+                         mean=0.6785
+  glass_blur             sev=1  acc=0.4377
+  glass_blur             sev=2  acc=0.4603
+  glass_blur             sev=3  acc=0.4812
+  glass_blur             sev=4  acc=0.3616
+  glass_blur             sev=5  acc=0.3971
+                         mean=0.4276
+  motion_blur            sev=1  acc=0.8071
+  motion_blur            sev=2  acc=0.6735
+  motion_blur            sev=3  acc=0.5395
+  motion_blur            sev=4  acc=0.5404
+  motion_blur            sev=5  acc=0.4483
+                         mean=0.6018
+  zoom_blur              sev=1  acc=0.7627
+  zoom_blur              sev=2  acc=0.6982
+  zoom_blur              sev=3  acc=0.5834
+  zoom_blur              sev=4  acc=0.4792
+  zoom_blur              sev=5  acc=0.3546
+                         mean=0.5756
+  gaussian_blur          sev=1  acc=0.9077
+  gaussian_blur          sev=2  acc=0.7730
+  gaussian_blur          sev=3  acc=0.5353
+  gaussian_blur          sev=4  acc=0.3084
+  gaussian_blur          sev=5  acc=0.1486
+                         mean=0.5346
+  snow                   sev=1  acc=0.8122
+  snow                   sev=2  acc=0.6694
+  snow                   sev=3  acc=0.7147
+  snow                   sev=4  acc=0.6855
+  snow                   sev=5  acc=0.6272
+                         mean=0.7018
+  frost                  sev=1  acc=0.8298
+  frost                  sev=2  acc=0.7465
+  frost                  sev=3  acc=0.6283
+  frost                  sev=4  acc=0.6093
+  frost                  sev=5  acc=0.4973
+                         mean=0.6622
+  fog                    sev=1  acc=0.9050
+  fog                    sev=2  acc=0.8832
+  fog                    sev=3  acc=0.8438
+  fog                    sev=4  acc=0.7942
+  fog                    sev=5  acc=0.5662
+                         mean=0.7985 [LUMINOSITY]
+  brightness             sev=1  acc=0.9100
+  brightness             sev=2  acc=0.9009
+  brightness             sev=3  acc=0.8904
+  brightness             sev=4  acc=0.8757
+  brightness             sev=5  acc=0.8399
+                         mean=0.8834 [LUMINOSITY]
+  spatter                sev=1  acc=0.8563
+  spatter                sev=2  acc=0.7545
+  spatter                sev=3  acc=0.6847
+  spatter                sev=4  acc=0.7898
+  spatter                sev=5  acc=0.6772
+                         mean=0.7525
+  contrast               sev=1  acc=0.9027
+  contrast               sev=2  acc=0.8644
+  contrast               sev=3  acc=0.8235
+  contrast               sev=4  acc=0.7324
+  contrast               sev=5  acc=0.3462
+                         mean=0.7338 [LUMINOSITY]
+  elastic_transform      sev=1  acc=0.8297
+  elastic_transform      sev=2  acc=0.8263
+  elastic_transform      sev=3  acc=0.7511
+  elastic_transform      sev=4  acc=0.6579
+  elastic_transform      sev=5  acc=0.6275
+                         mean=0.7385
+  pixelate               sev=1  acc=0.8548
+  pixelate               sev=2  acc=0.7543
+  pixelate               sev=3  acc=0.6651
+  pixelate               sev=4  acc=0.4517
+  pixelate               sev=5  acc=0.3059
+                         mean=0.6064
+  jpeg_compression       sev=1  acc=0.8284
+  jpeg_compression       sev=2  acc=0.7761
+  jpeg_compression       sev=3  acc=0.7554
+  jpeg_compression       sev=4  acc=0.7282
+  jpeg_compression       sev=5  acc=0.6885
+                         mean=0.7553
+  saturate               sev=1  acc=0.9084
+  saturate               sev=2  acc=0.9036
+  saturate               sev=3  acc=0.9071
+  saturate               sev=4  acc=0.8923
+  saturate               sev=5  acc=0.8747
+                         mean=0.8972
+
+Raw results saved  → results_v4/cifar10c_seed3/results_raw.csv
+Corruption summary → results_v4/cifar10c_seed3/corruption_summary.csv
+Global summary     → results_v4/cifar10c_seed3/summary.json
+
+============================================================
+Experiment              mCA   mCA_lum   mCA_nolum
+------------------------------------------------------------
+baseline_rgb         0.7090  0.8103    0.6900
+exp_lab              0.7157  0.8226    0.6956
+exp_hsv              0.7386  0.8093    0.7253
+exp_grayscale        0.6529  0.8052    0.6243
+============================================================
+Done.

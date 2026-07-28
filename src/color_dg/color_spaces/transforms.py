@@ -1,6 +1,7 @@
 """PyTorch transforms for color space conversion"""
 
 import torch
+import torch.nn.functional as F
 import numpy as np
 from PIL import Image
 from torchvision import transforms
@@ -48,19 +49,34 @@ class ColorspaceTransform:
         return torch.from_numpy(image).permute(2, 0, 1)
 
 
-def get_transforms(colorspace: str = "rgb", train: bool = True):
-    stats = CIFAR10_STATS.get(colorspace, CIFAR10_STATS["rgb"])
-    normalize = transforms.Normalize(mean=stats["mean"], std=stats["std"])
+def _build_normalize(colorspace: str, normalization: str):
+    """Phase 5 — normalization scheme ablation (RGB/LAB only, see docs/plan_recherche_suite.md).
 
+    - "zscore"  : per-channel mean/std from CIFAR10_STATS (reference, phases 2-4).
+    - "minmax"  : no extra normalization — channels stay in [0, 1] as produced
+                  by the colorspace converter.
+    - "centered": maps [0, 1] -> [-1, 1], i.e. Normalize(mean=0.5, std=0.5).
+    """
+    if normalization == "zscore":
+        stats = CIFAR10_STATS.get(colorspace, CIFAR10_STATS["rgb"])
+        return transforms.Normalize(mean=stats["mean"], std=stats["std"])
+    if normalization == "minmax":
+        return None
+    if normalization == "centered":
+        return transforms.Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5])
+    raise ValueError(f"Unknown normalization: '{normalization}'")
+
+
+def get_transforms(colorspace: str = "rgb", train: bool = True, normalization: str = "zscore"):
+    normalize = _build_normalize(colorspace, normalization)
+    steps = []
     if train:
-        return transforms.Compose([
-            transforms.RandomCrop(32, padding=4),   # ← increase
-            transforms.RandomHorizontalFlip(),       # ← inrease
-            ColorspaceTransform(colorspace=colorspace),
-            normalize,
-        ])
-    return transforms.Compose([
-        ColorspaceTransform(colorspace=colorspace),
-        normalize,
-    ])
+        steps += [
+            transforms.RandomCrop(32, padding=4),
+            transforms.RandomHorizontalFlip(),
+        ]
+    steps.append(ColorspaceTransform(colorspace=colorspace))
+    if normalize is not None:
+        steps.append(normalize)
+    return transforms.Compose(steps)
 

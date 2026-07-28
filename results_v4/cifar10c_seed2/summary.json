@@ -1,0 +1,30 @@
+{
+  "baseline_rgb": {
+    "colorspace": "rgb",
+    "seed": 2,
+    "mCA": 0.7282789473684211,
+    "mCA_luminosity": 0.8205066666666667,
+    "mCA_non_luminosity": 0.71098625
+  },
+  "exp_lab": {
+    "colorspace": "lab",
+    "seed": 2,
+    "mCA": 0.7146821052631578,
+    "mCA_luminosity": 0.8160933333333334,
+    "mCA_non_luminosity": 0.6956675
+  },
+  "exp_hsv": {
+    "colorspace": "hsv",
+    "seed": 2,
+    "mCA": 0.7262242105263157,
+    "mCA_luminosity": 0.8133866666666667,
+    "mCA_non_luminosity": 0.70988125
+  },
+  "exp_grayscale": {
+    "colorspace": "grayscale",
+    "seed": 2,
+    "mCA": 0.649937894736842,
+    "mCA_luminosity": 0.8044333333333333,
+    "mCA_non_luminosity": 0.62097
+  }
+}

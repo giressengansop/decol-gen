@@ -76,6 +76,8 @@ def main():
     # --- 1. Command-line arguments---
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", required=True, help="Path to the YAML file")
+    parser.add_argument("--seed", type=int, default=None, help="Override the seed from the YAML config")
+    parser.add_argument("--output_dir", default=None, help="Override the output_dir from the YAML config")
     args = parser.parse_args()
 
     # --- 2. Loading the YAML configuration ---
@@ -83,12 +85,18 @@ def main():
         cfg = yaml.safe_load(f)
 
     # --- 3. Seed + device ---
-    seed = cfg.get("seed", 42)
+    seed = args.seed if args.seed is not None else cfg.get("seed", 42)
+    cfg["seed"] = seed
+    if args.output_dir is not None:
+        cfg["output_dir"] = args.output_dir
+    elif args.seed is not None:
+        cfg["output_dir"] = os.path.join(cfg["output_dir"], f"seed{seed}")
     set_seed(seed)
     device = torch.device(
         cfg.get("device", "cuda") if torch.cuda.is_available() else "cpu"
     )
-    print(f"[{cfg['experiment']}] seed={seed}  device={device}  colorspace={cfg['colorspace']}")
+    normalization = cfg.get("normalization", "zscore")
+    print(f"[{cfg['experiment']}] seed={seed}  device={device}  colorspace={cfg['colorspace']}  normalization={normalization}")
 
     # --- 4. Output directory + save config for reproducibility ---
     os.makedirs(cfg["output_dir"], exist_ok=True)
@@ -99,6 +107,7 @@ def main():
         colorspace=cfg["colorspace"],
         batch_size=cfg["training"]["batch_size"],
         num_workers=cfg["data"]["num_workers"],
+        normalization=normalization,
     )
 
     # --- 6. Model (timm ResNet-18 via create_resnet18) ---
@@ -167,10 +176,12 @@ def main():
         writer.writerows(rows)
 
     summary = {
-        "experiment":   cfg["experiment"],
-        "model_name":   model_name,
-        "colorspace":   cfg["colorspace"],
-        "best_val_acc": best_acc,
+        "experiment":    cfg["experiment"],
+        "model_name":    model_name,
+        "colorspace":    cfg["colorspace"],
+        "normalization": normalization,
+        "seed":          seed,
+        "best_val_acc":  best_acc,
     }
     with open(os.path.join(cfg["output_dir"], "summary.json"), "w") as f:
         json.dump(summary, f, indent=2)

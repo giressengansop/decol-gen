@@ -1,0 +1,210 @@
+[
+  {
+    "colorspace": "rgb",
+    "normalization": "zscore",
+    "n_train_seeds": 5,
+    "train_seeds": [
+      0,
+      1,
+      2,
+      3,
+      42
+    ],
+    "val_acc_mean": 0.9267,
+    "val_acc_std": 0.0015953056133543905,
+    "n_cifar10c_seeds": 5,
+    "cifar10c_seeds": [
+      0,
+      1,
+      2,
+      3,
+      42
+    ],
+    "mCA_mean": 0.7229170526315789,
+    "mCA_std": 0.008184961867695184,
+    "mCA_luminosity_mean": 0.8198226666666667,
+    "mCA_luminosity_std": 0.005493255662881341,
+    "mCA_non_luminosity_mean": 0.7047472499999999,
+    "mCA_non_luminosity_std": 0.00876616602162826
+  },
+  {
+    "colorspace": "lab",
+    "normalization": "zscore",
+    "n_train_seeds": 5,
+    "train_seeds": [
+      0,
+      1,
+      2,
+      3,
+      42
+    ],
+    "val_acc_mean": 0.9290800000000001,
+    "val_acc_std": 0.002356268236003697,
+    "n_cifar10c_seeds": 5,
+    "cifar10c_seeds": [
+      0,
+      1,
+      2,
+      3,
+      42
+    ],
+    "mCA_mean": 0.7222745263157895,
+    "mCA_std": 0.007373768901425829,
+    "mCA_luminosity_mean": 0.8209933333333334,
+    "mCA_luminosity_std": 0.0028799922839402355,
+    "mCA_non_luminosity_mean": 0.7037647499999999,
+    "mCA_non_luminosity_std": 0.008563725249927724
+  },
+  {
+    "colorspace": "hsv",
+    "normalization": "zscore",
+    "n_train_seeds": 5,
+    "train_seeds": [
+      0,
+      1,
+      2,
+      3,
+      42
+    ],
+    "val_acc_mean": 0.9212999999999999,
+    "val_acc_std": 0.0010295630140987053,
+    "n_cifar10c_seeds": 5,
+    "cifar10c_seeds": [
+      0,
+      1,
+      2,
+      3,
+      42
+    ],
+    "mCA_mean": 0.7339002105263157,
+    "mCA_std": 0.005343164033010441,
+    "mCA_luminosity_mean": 0.8128546666666667,
+    "mCA_luminosity_std": 0.002426412074556849,
+    "mCA_non_luminosity_mean": 0.71909625,
+    "mCA_non_luminosity_std": 0.0064097512992900155
+  },
+  {
+    "colorspace": "grayscale",
+    "normalization": "zscore",
+    "n_train_seeds": 5,
+    "train_seeds": [
+      0,
+      1,
+      2,
+      3,
+      42
+    ],
+    "val_acc_mean": 0.90952,
+    "val_acc_std": 0.0024681977230359975,
+    "n_cifar10c_seeds": 5,
+    "cifar10c_seeds": [
+      0,
+      1,
+      2,
+      3,
+      42
+    ],
+    "mCA_mean": 0.6547625263157896,
+    "mCA_std": 0.00403832447908017,
+    "mCA_luminosity_mean": 0.8065853333333333,
+    "mCA_luminosity_std": 0.002229411481883837,
+    "mCA_non_luminosity_mean": 0.62629575,
+    "mCA_non_luminosity_std": 0.004630548074337418
+  },
+  {
+    "colorspace": "rgb",
+    "normalization": "minmax",
+    "n_train_seeds": 3,
+    "train_seeds": [
+      0,
+      1,
+      42
+    ],
+    "val_acc_mean": 0.9264666666666667,
+    "val_acc_std": 0.0014011899704655328,
+    "n_cifar10c_seeds": 3,
+    "cifar10c_seeds": [
+      0,
+      1,
+      42
+    ],
+    "mCA_mean": 0.7202764912280702,
+    "mCA_std": 0.008776396848569635,
+    "mCA_luminosity_mean": 0.8186333333333332,
+    "mCA_luminosity_std": 0.005986588715156957,
+    "mCA_non_luminosity_mean": 0.7018345833333334,
+    "mCA_non_luminosity_std": 0.00941250351372228
+  },
+  {
+    "colorspace": "lab",
+    "normalization": "minmax",
+    "n_train_seeds": 3,
+    "train_seeds": [
+      0,
+      1,
+      42
+    ],
+    "val_acc_mean": 0.9264333333333333,
+    "val_acc_std": 0.0004163331998931807,
+    "n_cifar10c_seeds": 3,
+    "cifar10c_seeds": [
+      0,
+      1,
+      42
+    ],
+    "mCA_mean": 0.7181421052631579,
+    "mCA_std": 0.010529922592597458,
+    "mCA_luminosity_mean": 0.8147266666666666,
+    "mCA_luminosity_std": 0.003138605493598144,
+    "mCA_non_luminosity_mean": 0.7000325,
+    "mCA_non_luminosity_std": 0.012924388464739816
+  },
+  {
+    "colorspace": "rgb",
+    "normalization": "centered",
+    "n_train_seeds": 3,
+    "train_seeds": [
+      0,
+      1,
+      42
+    ],
+    "val_acc_mean": 0.9257333333333334,
+    "val_acc_std": 0.0009609023536933088,
+    "n_cifar10c_seeds": 3,
+    "cifar10c_seeds": [
+      0,
+      1,
+      42
+    ],
+    "mCA_mean": 0.7206371929824561,
+    "mCA_std": 0.005983633479870128,
+    "mCA_luminosity_mean": 0.8169977777777778,
+    "mCA_luminosity_std": 0.00256000289351689,
+    "mCA_non_luminosity_mean": 0.7025695833333333,
+    "mCA_non_luminosity_std": 0.007508953128321773
+  },
+  {
+    "colorspace": "lab",
+    "normalization": "centered",
+    "n_train_seeds": 3,
+    "train_seeds": [
+      0,
+      1,
+      42
+    ],
+    "val_acc_mean": 0.9275000000000001,
+    "val_acc_std": 0.0008660254037844714,
+    "n_cifar10c_seeds": 3,
+    "cifar10c_seeds": [
+      0,
+      1,
+      42
+    ],
+    "mCA_mean": 0.720239649122807,
+    "mCA_std": 0.007359516750163536,
+    "mCA_luminosity_mean": 0.8191044444444445,
+    "mCA_luminosity_std": 0.0008734690310183517,
+    "mCA_non_luminosity_mean": 0.7017025,
+    "mCA_non_luminosity_std": 0.008603899824352881
+  }
+]
