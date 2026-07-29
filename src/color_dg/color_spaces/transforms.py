@@ -7,16 +7,33 @@ from PIL import Image
 from torchvision import transforms
 from .converter import ColorspaceConverter
 
-# Normalization stats for CIFAR-10 per colorspace.
-# RGB     : standard values from github.com/kuangliu/pytorch-cifar
-# HSV/LAB : computed on the full CIFAR-10 train set (50 000 images)
-#           using skimage-based converter (all channels in [0, 1])
-# Grayscale: same computation, single channel repeated 3×
+# Per-channel normalization statistics for CIFAR-10.
+#
+# Recalculated on 28 July 2026 over the full 50,000-image training set with
+# compute_cifar10_stats.py, which reuses this project's own converter.
+#
+# PREVIOUS VALUES (incorrect — used for results_v2 through results_v5):
+#   "rgb": {"mean": [0.4914, 0.4822, 0.4465], "std": [0.2023, 0.1994, 0.2010]},
+#   "hsv": {"mean": [0.3096, 0.2223, 0.3277], "std": [0.2418, 0.2047, 0.3050]},
+#   "lab": {"mean": [0.3277, 0.3277, 0.3277], "std": [0.2836, 0.1478, 0.1788]},
+#
+# The LAB standard deviations of the chroma channels were overestimated by a
+# factor of 3.7 (a) and 2.8 (b). After z-score normalization, a and b reached
+# the network with 0.32 and 0.41 times the variance of L instead of 1.0 — LAB
+# was the only color space whose channels were not equally weighted. The LAB
+# means were also identical across all three channels and equal to the V
+# channel of HSV (copy-paste error); after (a+128)/255, a and b must be ~0.50.
+#
+# Verification (Phase 5 bis, results_v6): RGB and LAB retrained and re-evaluated
+# on 5 seeds with the corrected constants. LAB - RGB is unchanged on all four
+# metrics — accuracy +0.18 pp (p = 0.14), mCA -0.05 pp (p = 0.69), mCA
+# luminosity +0.21 pp (p = 0.31). The correction reveals no latent LAB
+# advantage; the conclusions did not depend on this error.
 CIFAR10_STATS = {
-    "rgb":       {"mean": [0.4914, 0.4822, 0.4465], "std": [0.2023, 0.1994, 0.2010]},
-    "hsv":       {"mean": [0.3096, 0.2223, 0.3277], "std": [0.2418, 0.2047, 0.3050]},
-    "lab":       {"mean": [0.3277, 0.3277, 0.3277], "std": [0.2836, 0.1478, 0.1788]},
-    "grayscale": {"mean": [0.4809, 0.4809, 0.4809], "std": [0.2392, 0.2392, 0.2392]},
+    "rgb":         {"mean": [0.4914, 0.4822, 0.4465], "std": [0.2470, 0.2435, 0.2616]},
+    "hsv":         {"mean": [0.3254, 0.2738, 0.5393], "std": [0.2765, 0.2184, 0.2472]},
+    "lab":         {"mean": [0.5085, 0.5035, 0.5244], "std": [0.2426, 0.0398, 0.0631]},
+    "grayscale":   {"mean": [0.4809, 0.4809, 0.4809], "std": [0.2392, 0.2392, 0.2392]},
 }
 
 
