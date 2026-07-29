@@ -211,18 +211,4 @@ crédible plutôt que suspect.
   bruit d'échantillonnage à deux niveaux différents, pas d'un effet réel.
 
 **Conclusion scientifique du mémoire, maintenant étayée statistiquement à
-deux niveaux indépendants (graines ET normalisation)** : le choix d'espace
-colorimétrique d'entrée (RGB, HSV, LAB) n'a pas d'effet significatif sur
-l'accuracy ni sur la robustesse aux corruptions — y compris sur les
-corruptions de luminosité où un effet était pourtant attendu par hypothèse
-mécaniste, et y compris quand on fait varier la normalisation pour donner sa
-chance à LAB d'exprimer un avantage caché. Seule la perte d'information de la
-Grayscale a un effet net et systématique (dernière position sur tous les
-critères, toutes graines et normalisations confondues). Ce résultat est
-cohérent avec la littérature existante (Phase 6) et trouve une explication
-théorique plausible dans la capacité d'un réseau entraîné from scratch
-(première couche + BatchNorm) à apprendre lui-même une décorrélation du
-signal d'entrée, rendant le format de couleur en entrée peu critique. C'est un
-résultat négatif robuste et défendable — exactement ce que demandait
-l'encadreur : une conclusion vérifiée sous plusieurs angles plutôt que
-constatée sur un seul run avec une seule configuration.
+deux niveaux indépendants (graines ET normalisation)** : le choix entre RGB et LAB n'a d'effet significatif ni sur l'accuracy ni sur la robustesse, y compris sur les corruptions de luminosité où un effet était attendu par hypothèse mécaniste. HSV, en revanche, se distingue de façon cohérente : meilleur sur la robustesse globale (+1,16 pp contre LAB, 5 graines sur 5) et moins bon sur la luminosité (−0,81 pp, 0 sur 5). Ces écarts ne survivent pas à une correction pour tests multiples (meilleur p ajusté = 0,097) et sont donc rapportés comme observation exploratoire, appuyée par la cohérence inter-graines et des tailles d'effet larges (d ≈ 1,4 à 2,0) plutôt que par la p-value..

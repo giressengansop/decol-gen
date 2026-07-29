@@ -37,8 +37,7 @@ littérature).
 Concrètement : pour la phase 4, j'ai ajouté la possibilité de changer la
 graine aléatoire en ligne de commande, puis relancé les quatre espaces
 colorimétriques sur cinq graines différentes — vingt entraînements complets
-— et réévalué chacun des vingt modèles sur les 75 jeux de corruptions de
-CIFAR-10-C.
+— les 95 jeux de corruptions de CIFAR-10-C (19 corruptions × 5 niveaux)
 
 Résultats : sur la précision de validation, le classement RGB à peu près
 égal à LAB, devant HSV, et le niveau de gris nettement en retrait, est
