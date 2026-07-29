@@ -1,0 +1,18 @@
+{
+  "baseline_rgb": {
+    "colorspace": "rgb",
+    "normalization": "zscore",
+    "seed": 42,
+    "mCA": 0.7336347368421051,
+    "mCA_luminosity": 0.8240933333333333,
+    "mCA_non_luminosity": 0.71667375
+  },
+  "exp_lab": {
+    "colorspace": "lab",
+    "normalization": "zscore",
+    "seed": 42,
+    "mCA": 0.7346863157894736,
+    "mCA_luminosity": 0.8307733333333335,
+    "mCA_non_luminosity": 0.71667
+  }
+}
