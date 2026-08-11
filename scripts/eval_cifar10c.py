@@ -109,8 +109,9 @@ def evaluate(model, loader, device) -> float:
     return correct / total
 
 
-def load_model(checkpoint_path: str, device: torch.device) -> torch.nn.Module:
-    model = create_resnet18(num_classes=10, pretrained=False)
+def load_model(checkpoint_path: str, device: torch.device,
+               norm: str = "bn") -> torch.nn.Module:
+    model = create_resnet18(num_classes=10, pretrained=False, norm=norm)
     state = torch.load(checkpoint_path, map_location=device)
     model.load_state_dict(state)
     return model.to(device).eval()
@@ -125,6 +126,8 @@ def main():
                         help="Root of results_v3/ with best_model.pth files")
     parser.add_argument("--output_dir",    default="results_v3/cifar10c",
                         help="Where to write CSV/JSON outputs")
+    parser.add_argument("--norm", default="bn", choices=["bn", "gn"],
+                        help="Normalization layer the checkpoint was trained with")
     parser.add_argument("--batch_size",    type=int, default=256)
     parser.add_argument("--num_workers",   type=int, default=4)
     parser.add_argument("--seed",          type=int, default=None,
@@ -163,7 +166,7 @@ def main():
         print(f"Experiment : {exp_name}  (colorspace={colorspace})")
         print(f"Checkpoint : {checkpoint}")
 
-        model     = load_model(checkpoint, device)
+        model     = load_model(checkpoint, device, norm=args.norm)
         transform = get_transforms(colorspace, train=False, normalization=args.normalization)
         all_results[exp_name] = {}
 

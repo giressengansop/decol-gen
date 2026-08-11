@@ -115,6 +115,7 @@ def main():
     model = create_resnet18(
         num_classes=cfg["model"]["num_classes"],
         pretrained=cfg["model"].get("pretrained", False),
+        norm=cfg["model"].get("norm", "bn"),
     ).to(device)
 
     # --- 7. Loss, optimizer (timm), scheduler ---
