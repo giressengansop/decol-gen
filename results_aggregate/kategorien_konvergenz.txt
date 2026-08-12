@@ -1,0 +1,95 @@
+==============================================================================
+  PARTIE 1 — ROBUSTHEIT NACH KORRUPTIONSKATEGORIE
+==============================================================================
+
+### BatchNorm
+  Farbraum          gesamt       noise        blur     weather     digital  luminosity
+  --------------------------------------------------------------------------
+  rgb               72.38%      58.20%      67.92%      81.75%      78.80%      81.87%
+  lab               72.32%      48.32%      72.76%      83.65%      79.76%      82.08%
+  hsv               72.48%      54.12%      69.94%      82.64%      79.57%      81.40%
+  grayscale         65.48%      51.52%      56.50%      75.89%      75.20%      80.66%
+  --------------------------------------------------------------------------
+  Fächer             0.16        9.88        4.85        1.91        0.96        0.67 pp
+
+### GroupNorm
+  Farbraum          gesamt       noise        blur     weather     digital  luminosity
+  --------------------------------------------------------------------------
+  rgb               78.89%      70.69%      76.63%      83.40%      83.19%      86.52%
+  lab               78.38%      62.69%      80.20%      83.91%      83.57%      85.95%
+  hsv               78.41%      67.64%      78.11%      82.59%      83.15%      84.03%
+  grayscale         71.09%      57.62%      67.47%      77.67%      78.89%      84.50%
+  --------------------------------------------------------------------------
+  Fächer             0.51        8.00        3.56        1.32        0.42        2.49 pp
+
+
+### Gepaarte Vergleiche je Kategorie
+==============================================================================
+
+  BatchNorm
+    Kategorie                  LAB-RGB               HSV-RGB
+    noise           -9.88 pp p=0.000     -4.09 pp p=0.056 
+    blur            +4.85 pp p=0.000     +2.02 pp p=0.039 
+    weather         +1.91 pp p=0.000     +0.90 pp p=0.055 
+    digital         +0.96 pp p=0.020     +0.76 pp p=0.018 
+    luminosity      +0.21 pp p=0.310     -0.47 pp p=0.208 
+
+  GroupNorm
+    Kategorie                  LAB-RGB               HSV-RGB
+    noise           -8.00 pp p=0.000     -3.05 pp p=0.019 
+    blur            +3.56 pp p=0.000     +1.48 pp p=0.024 
+    weather         +0.51 pp p=0.071     -0.81 pp p=0.028 
+    digital         +0.38 pp p=0.063     -0.04 pp p=0.893 
+    luminosity      -0.57 pp p=0.018     -2.49 pp p=0.001 
+
+
+==============================================================================
+  PARTIE 2 — KONVERGENZDYNAMIK
+==============================================================================
+
+### BatchNorm — Epoche bis zum Erreichen einer Schwelle
+    Schwelle         rgb         lab         hsv   grayscale
+  ----------------------------------------------------------
+         70%         2.0         2.2         3.0         2.6
+         80%         4.4         4.4         5.0         5.2
+         85%         8.0         7.8         8.6        10.0
+         88%        12.4        12.0        12.6        19.6
+         90%        19.6        19.2        22.8        26.0
+         92%        28.0        26.8        29.4         nie
+
+  Fläche unter der Kurve (Ø val_acc über 50 Epochen)
+    rgb           88.83% ± 0.02
+    lab           88.99% ± 0.11
+    hsv           88.46% ± 0.12
+    grayscale     87.14% ± 0.14
+    LAB − RGB : +0.16 pp   p = 0.042   (4/5 Seeds)
+
+### GroupNorm — Epoche bis zum Erreichen einer Schwelle
+    Schwelle         rgb         lab         hsv   grayscale
+  ----------------------------------------------------------
+         70%         4.8         5.2         6.0         5.2
+         80%         8.8         9.4        10.4         9.6
+         85%        13.8        15.6        17.2        18.0
+         88%        23.8        25.6        26.0        27.0
+         90%        31.8         nie         nie         nie
+         92%         nie         nie         nie         nie
+
+  Fläche unter der Kurve (Ø val_acc über 50 Epochen)
+    rgb           84.96% ± 0.21
+    lab           84.42% ± 0.12
+    hsv           83.72% ± 0.18
+    grayscale     83.22% ± 0.35
+    LAB − RGB : -0.53 pp   p = 0.005   (0/5 Seeds)
+
+==============================================================================
+  LESEHILFE
+
+  Kategorien : "weather" folgt Hendrycks (snow, frost, fog, brightness,
+  spatter). "luminosity" ist die arbeitsspezifische Metrik (brightness,
+  fog, contrast) und ÜBERSCHNEIDET SICH mit weather und digital — beide
+  Zahlen dürfen nicht addiert werden.
+
+  Konvergenz : Antwortet auf die Exposé-Frage "Does CIELAB converge
+  faster?". Entscheidend ist nicht ein einzelner Schwellenwert, sondern
+  ob sich das Bild über alle Schwellen hinweg konsistent zeigt.
+

@@ -1,0 +1,8 @@
+{
+  "experiment": "exp_hsv",
+  "model_name": "resnet18",
+  "colorspace": "hsv",
+  "normalization": "zscore",
+  "seed": 42,
+  "best_val_acc": 0.9255
+}

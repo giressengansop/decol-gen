@@ -1,0 +1,8 @@
+{
+  "experiment": "exp_grayscale_gn",
+  "model_name": "resnet18",
+  "colorspace": "grayscale",
+  "normalization": "zscore",
+  "seed": 3,
+  "best_val_acc": 0.8856
+}
