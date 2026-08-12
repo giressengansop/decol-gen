@@ -6,7 +6,7 @@ from ..color_spaces.transforms import get_transforms
 
 def get_cifar10_loaders(
     colorspace: str = "rgb",
-    batch_size: int = 128,
+    batch_size: int = 32,
     num_workers: int = 2,
     data_root: str = "./data",
     normalization: str = "zscore",

@@ -29,7 +29,7 @@ separate channel.
 | Dataset | CIFAR-10 (50 000 train / 10 000 test) |
 | Robustness benchmark | CIFAR-10-C — 19 corruptions × 5 severities = 95 test sets |
 | Model | ResNet-18 (timm), adapted for 32×32: 3×3 stride-1 conv1, no maxpool |
-| Training | 50 epochs, Adam, StepLR, batch 128, from scratch |
+| Training | 50 epochs, Adam, StepLR, batch 32, from scratch |
 | Color spaces | RGB (baseline), HSV, CIELAB, grayscale (3-channel duplicate) |
 | Normalization schemes | z-score (default), min-max, centered [-1, 1] |
 | Seeds | 5 (0, 1, 2, 3, 42) → 20 full training runs |
