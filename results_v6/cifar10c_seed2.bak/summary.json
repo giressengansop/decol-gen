@@ -14,13 +14,5 @@
     "mCA": 0.7245652631578948,
     "mCA_luminosity": 0.8186733333333335,
     "mCA_non_luminosity": 0.70692
-  },
-  "exp_hsv": {
-    "colorspace": "hsv",
-    "normalization": "zscore",
-    "seed": 2,
-    "mCA": 0.7256326315789473,
-    "mCA_luminosity": 0.8160799999999999,
-    "mCA_non_luminosity": 0.70867375
   }
 }

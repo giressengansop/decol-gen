@@ -1,0 +1,28 @@
+# Grayscale Experiment Configuration
+experiment: "exp_grayscale"
+colorspace: "grayscale"
+
+model:
+  name: "resnet18"
+  pretrained: false
+  num_classes: 10
+
+training:
+  epochs: 50
+  batch_size: 32
+  learning_rate: 0.001
+  optimizer: "adam"
+  weight_decay: 0.0
+  scheduler: "step"
+  scheduler_params:
+    step_size: 25
+    gamma: 0.1
+
+data:
+  dataset: "cifar10"
+  num_workers: 4
+
+device: "cuda"
+seed: 42
+
+output_dir: "results_v3/exp_grayscale"

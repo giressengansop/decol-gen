@@ -26,7 +26,7 @@ from .converter import ColorspaceConverter
 #
 # Verification (Phase 5 bis, results_v6): RGB and LAB retrained and re-evaluated
 # on 5 seeds with the corrected constants. LAB - RGB is unchanged on all four
-# metrics — accuracy +0.18 pp (p = 0.14), mCA -0.05 pp (p = 0.69), mCA
+# metrics — accuracy +0.18 pp (p = 0.14), mCA -0.05 pp (p = 0.67), mCA
 # luminosity +0.21 pp (p = 0.31). The correction reveals no latent LAB
 # advantage; the conclusions did not depend on this error.
 CIFAR10_STATS = {

@@ -1,0 +1,57 @@
+nohup: ignoring input
+/home/stud/gnjinkap/miniforge3/envs/thesis/lib/python3.11/site-packages/torchvision/datasets/cifar.py:83: VisibleDeprecationWarning: dtype(): align should be passed as Python or NumPy boolean but got `align=0`. Did you mean to pass a tuple to create a subarray type? (Deprecated NumPy 2.4)
+  entry = pickle.load(f, encoding="latin1")
+[exp_grayscale] seed=0  device=cuda  colorspace=grayscale  normalization=zscore
+Epoch 001/50 | train_loss=1.4980  train_acc=0.4558 | val_loss=1.2009  val_acc=0.5877 | 21.7s
+Epoch 002/50 | train_loss=1.0187  train_acc=0.6363 | val_loss=0.8490  val_acc=0.7019 | 15.0s
+Epoch 003/50 | train_loss=0.8160  train_acc=0.7150 | val_loss=0.6760  val_acc=0.7655 | 15.1s
+Epoch 004/50 | train_loss=0.6922  train_acc=0.7604 | val_loss=0.6473  val_acc=0.7816 | 15.2s
+Epoch 005/50 | train_loss=0.6124  train_acc=0.7881 | val_loss=0.5836  val_acc=0.8013 | 15.4s
+Epoch 006/50 | train_loss=0.5440  train_acc=0.8114 | val_loss=0.5659  val_acc=0.8071 | 15.4s
+Epoch 007/50 | train_loss=0.4998  train_acc=0.8271 | val_loss=0.4962  val_acc=0.8310 | 15.5s
+Epoch 008/50 | train_loss=0.4550  train_acc=0.8429 | val_loss=0.4687  val_acc=0.8410 | 15.5s
+Epoch 009/50 | train_loss=0.4164  train_acc=0.8561 | val_loss=0.4522  val_acc=0.8437 | 15.5s
+Epoch 010/50 | train_loss=0.3815  train_acc=0.8685 | val_loss=0.4550  val_acc=0.8535 | 15.6s
+Epoch 011/50 | train_loss=0.3577  train_acc=0.8761 | val_loss=0.4337  val_acc=0.8579 | 15.5s
+Epoch 012/50 | train_loss=0.3274  train_acc=0.8865 | val_loss=0.4175  val_acc=0.8625 | 15.6s
+Epoch 013/50 | train_loss=0.3032  train_acc=0.8941 | val_loss=0.4022  val_acc=0.8705 | 15.5s
+Epoch 014/50 | train_loss=0.2851  train_acc=0.9004 | val_loss=0.4059  val_acc=0.8715 | 15.6s
+Epoch 015/50 | train_loss=0.2617  train_acc=0.9081 | val_loss=0.4233  val_acc=0.8686 | 15.5s
+Epoch 016/50 | train_loss=0.2467  train_acc=0.9126 | val_loss=0.3854  val_acc=0.8773 | 15.5s
+Epoch 017/50 | train_loss=0.2253  train_acc=0.9215 | val_loss=0.3932  val_acc=0.8771 | 15.6s
+Epoch 018/50 | train_loss=0.2102  train_acc=0.9265 | val_loss=0.4237  val_acc=0.8724 | 15.5s
+Epoch 019/50 | train_loss=0.1960  train_acc=0.9307 | val_loss=0.3928  val_acc=0.8818 | 15.5s
+Epoch 020/50 | train_loss=0.1825  train_acc=0.9347 | val_loss=0.3945  val_acc=0.8825 | 15.6s
+Epoch 021/50 | train_loss=0.1723  train_acc=0.9386 | val_loss=0.3848  val_acc=0.8884 | 15.6s
+Epoch 022/50 | train_loss=0.1618  train_acc=0.9416 | val_loss=0.4029  val_acc=0.8821 | 15.6s
+Epoch 023/50 | train_loss=0.1530  train_acc=0.9470 | val_loss=0.4207  val_acc=0.8861 | 15.6s
+Epoch 024/50 | train_loss=0.1415  train_acc=0.9497 | val_loss=0.4052  val_acc=0.8846 | 15.5s
+Epoch 025/50 | train_loss=0.1342  train_acc=0.9531 | val_loss=0.4480  val_acc=0.8830 | 15.5s
+Epoch 026/50 | train_loss=0.0818  train_acc=0.9724 | val_loss=0.3611  val_acc=0.9026 | 15.6s
+Epoch 027/50 | train_loss=0.0627  train_acc=0.9790 | val_loss=0.3640  val_acc=0.9045 | 15.6s
+Epoch 028/50 | train_loss=0.0560  train_acc=0.9812 | val_loss=0.3748  val_acc=0.9043 | 15.6s
+Epoch 029/50 | train_loss=0.0511  train_acc=0.9821 | val_loss=0.3815  val_acc=0.9047 | 15.6s
+Epoch 030/50 | train_loss=0.0453  train_acc=0.9848 | val_loss=0.3837  val_acc=0.9058 | 15.6s
+Epoch 031/50 | train_loss=0.0418  train_acc=0.9858 | val_loss=0.3987  val_acc=0.9059 | 15.6s
+Epoch 032/50 | train_loss=0.0395  train_acc=0.9869 | val_loss=0.4059  val_acc=0.9052 | 15.6s
+Epoch 033/50 | train_loss=0.0360  train_acc=0.9878 | val_loss=0.4077  val_acc=0.9063 | 15.6s
+Epoch 034/50 | train_loss=0.0333  train_acc=0.9886 | val_loss=0.4093  val_acc=0.9048 | 15.6s
+Epoch 035/50 | train_loss=0.0306  train_acc=0.9901 | val_loss=0.4147  val_acc=0.9060 | 15.6s
+Epoch 036/50 | train_loss=0.0286  train_acc=0.9904 | val_loss=0.4347  val_acc=0.9059 | 15.6s
+Epoch 037/50 | train_loss=0.0277  train_acc=0.9911 | val_loss=0.4297  val_acc=0.9064 | 15.6s
+Epoch 038/50 | train_loss=0.0273  train_acc=0.9907 | val_loss=0.4355  val_acc=0.9058 | 15.6s
+Epoch 039/50 | train_loss=0.0266  train_acc=0.9913 | val_loss=0.4414  val_acc=0.9085 | 15.6s
+Epoch 040/50 | train_loss=0.0235  train_acc=0.9920 | val_loss=0.4486  val_acc=0.9055 | 15.6s
+Epoch 041/50 | train_loss=0.0235  train_acc=0.9919 | val_loss=0.4519  val_acc=0.9051 | 15.5s
+Epoch 042/50 | train_loss=0.0231  train_acc=0.9927 | val_loss=0.4556  val_acc=0.9071 | 15.6s
+Epoch 043/50 | train_loss=0.0212  train_acc=0.9929 | val_loss=0.4613  val_acc=0.9078 | 15.6s
+Epoch 044/50 | train_loss=0.0208  train_acc=0.9928 | val_loss=0.4627  val_acc=0.9071 | 15.6s
+Epoch 045/50 | train_loss=0.0188  train_acc=0.9939 | val_loss=0.4627  val_acc=0.9076 | 15.5s
+Epoch 046/50 | train_loss=0.0195  train_acc=0.9933 | val_loss=0.4712  val_acc=0.9062 | 15.6s
+Epoch 047/50 | train_loss=0.0178  train_acc=0.9940 | val_loss=0.4775  val_acc=0.9063 | 15.6s
+Epoch 048/50 | train_loss=0.0170  train_acc=0.9945 | val_loss=0.4799  val_acc=0.9066 | 15.5s
+Epoch 049/50 | train_loss=0.0166  train_acc=0.9943 | val_loss=0.4883  val_acc=0.9076 | 15.6s
+Epoch 050/50 | train_loss=0.0154  train_acc=0.9948 | val_loss=0.4870  val_acc=0.9057 | 15.6s
+
+Best val accuracy : 0.9085
+Results saved to  : results_v6_gray/exp_grayscale_seed0

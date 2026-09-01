@@ -1,0 +1,126 @@
+nohup: ignoring input
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/stud/gnjinkap/decol-gen/scripts/train_model.py", line 195, in <module>
+    main()
+  File "/home/stud/gnjinkap/decol-gen/scripts/train_model.py", line 106, in main
+    train_loader, test_loader = get_cifar10_loaders(
+                                ^^^^^^^^^^^^^^^^^^^^
+  File "/home/stud/gnjinkap/decol-gen/src/color_dg/data/loader.py", line 16, in get_cifar10_loaders
+    transform=get_transforms(colorspace, train=True, normalization=normalization)),
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/stud/gnjinkap/decol-gen/src/color_dg/color_spaces/transforms.py", line 88, in get_transforms
+    normalize = _build_normalize(colorspace, normalization)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/stud/gnjinkap/decol-gen/src/color_dg/color_spaces/transforms.py", line 84, in _build_normalize
+    raise ValueError(f"Unknown normalization: '{normalization}'")
+ValueError: Unknown normalization: 'uniscale'
+[exp_lab_uniscale] seed=0  device=cuda  colorspace=lab  normalization=uniscale
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/stud/gnjinkap/decol-gen/scripts/train_model.py", line 195, in <module>
+    main()
+  File "/home/stud/gnjinkap/decol-gen/scripts/train_model.py", line 106, in main
+    train_loader, test_loader = get_cifar10_loaders(
+                                ^^^^^^^^^^^^^^^^^^^^
+  File "/home/stud/gnjinkap/decol-gen/src/color_dg/data/loader.py", line 16, in get_cifar10_loaders
+    transform=get_transforms(colorspace, train=True, normalization=normalization)),
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/stud/gnjinkap/decol-gen/src/color_dg/color_spaces/transforms.py", line 88, in get_transforms
+    normalize = _build_normalize(colorspace, normalization)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/stud/gnjinkap/decol-gen/src/color_dg/color_spaces/transforms.py", line 84, in _build_normalize
+    raise ValueError(f"Unknown normalization: '{normalization}'")
+ValueError: Unknown normalization: 'uniscale'
+[exp_lab_uniscale] seed=1  device=cuda  colorspace=lab  normalization=uniscale
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/stud/gnjinkap/decol-gen/scripts/train_model.py", line 195, in <module>
+    main()
+  File "/home/stud/gnjinkap/decol-gen/scripts/train_model.py", line 106, in main
+    train_loader, test_loader = get_cifar10_loaders(
+                                ^^^^^^^^^^^^^^^^^^^^
+  File "/home/stud/gnjinkap/decol-gen/src/color_dg/data/loader.py", line 16, in get_cifar10_loaders
+    transform=get_transforms(colorspace, train=True, normalization=normalization)),
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/stud/gnjinkap/decol-gen/src/color_dg/color_spaces/transforms.py", line 88, in get_transforms
+    normalize = _build_normalize(colorspace, normalization)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/stud/gnjinkap/decol-gen/src/color_dg/color_spaces/transforms.py", line 84, in _build_normalize
+    raise ValueError(f"Unknown normalization: '{normalization}'")
+ValueError: Unknown normalization: 'uniscale'
+[exp_lab_uniscale] seed=2  device=cuda  colorspace=lab  normalization=uniscale
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/stud/gnjinkap/decol-gen/scripts/train_model.py", line 195, in <module>
+    main()
+  File "/home/stud/gnjinkap/decol-gen/scripts/train_model.py", line 106, in main
+    train_loader, test_loader = get_cifar10_loaders(
+                                ^^^^^^^^^^^^^^^^^^^^
+  File "/home/stud/gnjinkap/decol-gen/src/color_dg/data/loader.py", line 16, in get_cifar10_loaders
+    transform=get_transforms(colorspace, train=True, normalization=normalization)),
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/stud/gnjinkap/decol-gen/src/color_dg/color_spaces/transforms.py", line 88, in get_transforms
+    normalize = _build_normalize(colorspace, normalization)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/stud/gnjinkap/decol-gen/src/color_dg/color_spaces/transforms.py", line 84, in _build_normalize
+    raise ValueError(f"Unknown normalization: '{normalization}'")
+ValueError: Unknown normalization: 'uniscale'
+[exp_lab_uniscale] seed=3  device=cuda  colorspace=lab  normalization=uniscale
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/home/stud/gnjinkap/decol-gen/scripts/train_model.py", line 195, in <module>
+    main()
+  File "/home/stud/gnjinkap/decol-gen/scripts/train_model.py", line 106, in main
+    train_loader, test_loader = get_cifar10_loaders(
+                                ^^^^^^^^^^^^^^^^^^^^
+  File "/home/stud/gnjinkap/decol-gen/src/color_dg/data/loader.py", line 16, in get_cifar10_loaders
+    transform=get_transforms(colorspace, train=True, normalization=normalization)),
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/stud/gnjinkap/decol-gen/src/color_dg/color_spaces/transforms.py", line 88, in get_transforms
+    normalize = _build_normalize(colorspace, normalization)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/stud/gnjinkap/decol-gen/src/color_dg/color_spaces/transforms.py", line 84, in _build_normalize
+    raise ValueError(f"Unknown normalization: '{normalization}'")
+ValueError: Unknown normalization: 'uniscale'
+[exp_lab_uniscale] seed=42  device=cuda  colorspace=lab  normalization=uniscale
+usage: eval_cifar10c.py [-h] [--cifar10c_root CIFAR10C_ROOT]
+                        [--results_dir RESULTS_DIR] [--output_dir OUTPUT_DIR]
+                        [--norm {bn,gn}] [--batch_size BATCH_SIZE]
+                        [--num_workers NUM_WORKERS] [--seed SEED]
+                        [--normalization {zscore,minmax,centered}]
+                        [--subdir_suffix SUBDIR_SUFFIX]
+eval_cifar10c.py: error: argument --normalization: invalid choice: 'uniscale' (choose from 'zscore', 'minmax', 'centered')
+usage: eval_cifar10c.py [-h] [--cifar10c_root CIFAR10C_ROOT]
+                        [--results_dir RESULTS_DIR] [--output_dir OUTPUT_DIR]
+                        [--norm {bn,gn}] [--batch_size BATCH_SIZE]
+                        [--num_workers NUM_WORKERS] [--seed SEED]
+                        [--normalization {zscore,minmax,centered}]
+                        [--subdir_suffix SUBDIR_SUFFIX]
+eval_cifar10c.py: error: argument --normalization: invalid choice: 'uniscale' (choose from 'zscore', 'minmax', 'centered')
+usage: eval_cifar10c.py [-h] [--cifar10c_root CIFAR10C_ROOT]
+                        [--results_dir RESULTS_DIR] [--output_dir OUTPUT_DIR]
+                        [--norm {bn,gn}] [--batch_size BATCH_SIZE]
+                        [--num_workers NUM_WORKERS] [--seed SEED]
+                        [--normalization {zscore,minmax,centered}]
+                        [--subdir_suffix SUBDIR_SUFFIX]
+eval_cifar10c.py: error: argument --normalization: invalid choice: 'uniscale' (choose from 'zscore', 'minmax', 'centered')
+usage: eval_cifar10c.py [-h] [--cifar10c_root CIFAR10C_ROOT]
+                        [--results_dir RESULTS_DIR] [--output_dir OUTPUT_DIR]
+                        [--norm {bn,gn}] [--batch_size BATCH_SIZE]
+                        [--num_workers NUM_WORKERS] [--seed SEED]
+                        [--normalization {zscore,minmax,centered}]
+                        [--subdir_suffix SUBDIR_SUFFIX]
+eval_cifar10c.py: error: argument --normalization: invalid choice: 'uniscale' (choose from 'zscore', 'minmax', 'centered')
+usage: eval_cifar10c.py [-h] [--cifar10c_root CIFAR10C_ROOT]
+                        [--results_dir RESULTS_DIR] [--output_dir OUTPUT_DIR]
+                        [--norm {bn,gn}] [--batch_size BATCH_SIZE]
+                        [--num_workers NUM_WORKERS] [--seed SEED]
+                        [--normalization {zscore,minmax,centered}]
+                        [--subdir_suffix SUBDIR_SUFFIX]
+eval_cifar10c.py: error: argument --normalization: invalid choice: 'uniscale' (choose from 'zscore', 'minmax', 'centered')

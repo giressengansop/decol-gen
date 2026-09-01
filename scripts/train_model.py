@@ -19,7 +19,7 @@ import yaml
 from timm.optim import create_optimizer_v2
 
 from color_dg.data.loader import get_cifar10_loaders
-from color_dg.models.resnet import create_resnet18
+from color_dg.models import create_model
 
 
 def set_seed(seed: int) -> None:
@@ -112,7 +112,8 @@ def main():
 
     # --- 6. Model (timm ResNet-18 via create_resnet18) ---
     model_name = cfg["model"].get("name", "resnet18")
-    model = create_resnet18(
+    model = create_model(
+        cfg["model"].get("name", "resnet18"),
         num_classes=cfg["model"]["num_classes"],
         pretrained=cfg["model"].get("pretrained", False),
         norm=cfg["model"].get("norm", "bn"),
