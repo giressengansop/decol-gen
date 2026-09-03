@@ -1,0 +1,8 @@
+{
+  "experiment": "exp_hsv",
+  "model_name": "vgg11",
+  "colorspace": "hsv",
+  "normalization": "zscore",
+  "seed": 1,
+  "best_val_acc": 0.9013
+}

@@ -1,0 +1,8 @@
+{
+  "experiment": "baseline_rgb",
+  "model_name": "vgg11",
+  "colorspace": "rgb",
+  "normalization": "zscore",
+  "seed": 3,
+  "best_val_acc": 0.9071
+}

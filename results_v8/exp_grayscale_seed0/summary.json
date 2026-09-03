@@ -1,0 +1,8 @@
+{
+  "experiment": "exp_grayscale",
+  "model_name": "vgg11",
+  "colorspace": "grayscale",
+  "normalization": "zscore",
+  "seed": 0,
+  "best_val_acc": 0.8347
+}
