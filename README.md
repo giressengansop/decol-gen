@@ -194,3 +194,26 @@ Korrektur nicht betroffen.
 In `results_v8` und `results_v9` ist `cifar10c4_seed*` die maßgebliche
 Auswertung über alle vier Farbräume; `cifar10c_seed*` stammt aus einem
 früheren Durchgang ohne HSV.
+
+## Ergebnisverzeichnisse
+
+| Verzeichnis | Architektur | Normalisierung | Farbräume | Seeds |
+|---|---|---|---|---|
+| `results_v4` | ResNet-18 | BatchNorm | 4 | 5 |
+| `results_v5` | ResNet-18 | BatchNorm | 2 | 3 |
+| `results_v6` | ResNet-18 | BatchNorm | 3 | 5 |
+| `results_v6_gray` | ResNet-18 | BatchNorm | Graustufen | 1 |
+| `results_v7` | ResNet-18 | GroupNorm | 4 | 5 |
+| `results_v8` | VGG-11 | keine | 4 | 5 |
+| `results_v9` | VGG-11 | BatchNorm | 4 | 5 |
+
+`results_v4` und `results_v5` entstanden vor der Neuberechnung der
+Normalisierungskonstanten (Commit `e02b93e`); für RGB, CIELAB und HSV sind
+`results_v6` und später maßgeblich. Der Graustufen-Eintrag war von der
+Korrektur nicht betroffen, weshalb die Graustufen-Bedingung aus `results_v4`
+weiterhin gültig ist; `results_v6_gray` enthält den Kontrolllauf, der dies
+bestätigt.
+
+In `results_v8` und `results_v9` ist `cifar10c4_seed*` die maßgebliche
+Auswertung über alle vier Farbräume; `cifar10c_seed*` stammt aus einem
+früheren Durchgang ohne HSV.
