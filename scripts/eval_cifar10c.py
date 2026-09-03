@@ -24,7 +24,7 @@ import torch
 from torch.utils.data import DataLoader, Dataset
 
 from color_dg.color_spaces.transforms import get_transforms
-from color_dg.models.resnet import create_resnet18
+from color_dg.models import create_model
 
 # ── Corruption catalogue ────────────────────────────────────────────────────
 # Standard 15 + extras present in the Zenodo distribution
@@ -110,8 +110,8 @@ def evaluate(model, loader, device) -> float:
 
 
 def load_model(checkpoint_path: str, device: torch.device,
-               norm: str = "bn") -> torch.nn.Module:
-    model = create_resnet18(num_classes=10, pretrained=False, norm=norm)
+               norm: str = "bn", arch: str = "resnet18") -> torch.nn.Module:
+    model = create_model(arch, num_classes=10, pretrained=False, norm=norm)
     state = torch.load(checkpoint_path, map_location=device)
     model.load_state_dict(state)
     return model.to(device).eval()
@@ -126,8 +126,11 @@ def main():
                         help="Root of results_v3/ with best_model.pth files")
     parser.add_argument("--output_dir",    default="results_v3/cifar10c",
                         help="Where to write CSV/JSON outputs")
-    parser.add_argument("--norm", default="bn", choices=["bn", "gn"],
+    parser.add_argument("--norm", default="bn", choices=["bn", "gn", "none"],
                         help="Normalization layer the checkpoint was trained with")
+    parser.add_argument("--arch", default="resnet18",
+                        choices=["resnet18", "vgg11"],
+                        help="Architecture the checkpoint was trained with")
     parser.add_argument("--batch_size",    type=int, default=256)
     parser.add_argument("--num_workers",   type=int, default=4)
     parser.add_argument("--seed",          type=int, default=None,
@@ -166,7 +169,7 @@ def main():
         print(f"Experiment : {exp_name}  (colorspace={colorspace})")
         print(f"Checkpoint : {checkpoint}")
 
-        model     = load_model(checkpoint, device, norm=args.norm)
+        model     = load_model(checkpoint, device, norm=args.norm, arch=args.arch)
         transform = get_transforms(colorspace, train=False, normalization=args.normalization)
         all_results[exp_name] = {}
 
