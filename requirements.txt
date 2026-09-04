@@ -9,7 +9,7 @@ bleach==6.4.0
 certifi==2026.4.22
 charset-normalizer==3.4.7
 click==8.4.2
--e git+https://github.com/giressengansop/decol-gen.git@24e4a77837df0a18510ab0809c6ccf23c76e6a04#egg=color_dg
+-e git+https://github.com/giressengansop/decol-gen.git@c118ab421dd591d973b287f6663189516a79a349#egg=color_dg
 comm==0.2.3
 contourpy @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_contourpy_1769155975/work
 cycler @ file:///home/conda/feedstock_root/build_artifacts/bld/rattler-build_cycler_1764466758/work
