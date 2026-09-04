@@ -1,0 +1,93 @@
+
+==========================================================================
+  GELERNTE FARBRICHTUNGEN IN conv1 — ResNet-18 + BatchNorm
+==========================================================================
+Quelle            l1      l2      l3    Rang(oM)       Rang je Seed
+rgb            0.501   0.297   0.201        2.63      2.62 +/- 0.04  (n=5)
+lab            0.469   0.290   0.241        2.76      2.76 +/- 0.04  (n=5)
+hsv            0.440   0.333   0.228        2.81      2.80 +/- 0.03  (n=5)
+
+Achsen des RGB-Netzes (Vorzeichen normiert):
+  Achse 1  [+0.576 +0.649 +0.497]  l=0.501   |cos| zu (1,1,1) = 0.994
+  Achse 2  [+0.764 -0.210 -0.611]  l=0.297   |cos| zu (1,1,1) = 0.033
+  Achse 3  [-0.292 +0.731 -0.617]  l=0.201   |cos| zu (1,1,1) = 0.103
+
+Gepaarte Tests des effektiven Rangs (je Startwert):
+  lab       - rgb       +0.132   p=0.0055   5/5
+  hsv       - rgb       +0.179   p=0.0007   5/5
+
+==========================================================================
+  GELERNTE FARBRICHTUNGEN IN conv1 — ResNet-18 + BN (Graustufen)
+==========================================================================
+Quelle            l1      l2      l3    Rang(oM)       Rang je Seed
+rgb            0.501   0.293   0.206        2.64      2.63 +/- 0.05  (n=5)
+lab            0.395   0.317   0.288        2.95      2.94 +/- 0.01  (n=5)
+hsv            0.473   0.316   0.211        2.72      2.71 +/- 0.05  (n=5)
+grayscale      0.848   0.080   0.072        1.37      1.37 +/- 0.01  (n=5)
+
+Achsen des RGB-Netzes (Vorzeichen normiert):
+  Achse 1  [+0.602 +0.648 +0.466]  l=0.501   |cos| zu (1,1,1) = 0.991
+  Achse 2  [+0.760 -0.286 -0.584]  l=0.293   |cos| zu (1,1,1) = 0.063
+  Achse 3  [-0.245 +0.706 -0.665]  l=0.206   |cos| zu (1,1,1) = 0.118
+
+Gepaarte Tests des effektiven Rangs (je Startwert):
+  lab       - rgb       +0.313   p=0.0001   5/5
+  hsv       - rgb       +0.079   p=0.0471   5/5
+  rgb       - grayscale +1.262   p=0.0000   5/5
+
+==========================================================================
+  GELERNTE FARBRICHTUNGEN IN conv1 — ResNet-18 + GroupNorm
+==========================================================================
+Quelle            l1      l2      l3    Rang(oM)       Rang je Seed
+rgb            0.507   0.266   0.227        2.64      2.63 +/- 0.04  (n=5)
+lab            0.458   0.285   0.257        2.80      2.80 +/- 0.03  (n=5)
+hsv            0.470   0.285   0.245        2.76      2.76 +/- 0.04  (n=5)
+grayscale      0.832   0.089   0.079        1.42      1.42 +/- 0.01  (n=5)
+
+Achsen des RGB-Netzes (Vorzeichen normiert):
+  Achse 1  [+0.581 +0.619 +0.529]  l=0.507   |cos| zu (1,1,1) = 0.998
+  Achse 2  [+0.812 -0.390 -0.434]  l=0.266   |cos| zu (1,1,1) = 0.008
+  Achse 3  [+0.063 -0.681 +0.729]  l=0.227   |cos| zu (1,1,1) = 0.064
+
+Gepaarte Tests des effektiven Rangs (je Startwert):
+  lab       - rgb       +0.163   p=0.0006   5/5
+  hsv       - rgb       +0.124   p=0.0084   5/5
+  rgb       - grayscale +1.218   p=0.0000   5/5
+
+==========================================================================
+  GELERNTE FARBRICHTUNGEN IN conv1 — VGG-11 + BatchNorm
+==========================================================================
+Quelle            l1      l2      l3    Rang(oM)       Rang je Seed
+rgb            0.583   0.265   0.152        2.31      2.31 +/- 0.08  (n=5)
+lab            0.532   0.263   0.205        2.53      2.53 +/- 0.08  (n=5)
+hsv            0.470   0.286   0.244        2.76      2.74 +/- 0.09  (n=5)
+grayscale      0.943   0.029   0.028        1.12      1.12 +/- 0.01  (n=5)
+
+Achsen des RGB-Netzes (Vorzeichen normiert):
+  Achse 1  [+0.554 +0.628 +0.547]  l=0.583   |cos| zu (1,1,1) = 0.998
+  Achse 2  [+0.789 -0.186 -0.585]  l=0.265   |cos| zu (1,1,1) = 0.010
+  Achse 3  [-0.266 +0.755 -0.599]  l=0.152   |cos| zu (1,1,1) = 0.063
+
+Gepaarte Tests des effektiven Rangs (je Startwert):
+  lab       - rgb       +0.224   p=0.0037   5/5
+  hsv       - rgb       +0.437   p=0.0033   5/5
+  rgb       - grayscale +1.184   p=0.0000   5/5
+
+==========================================================================
+  GELERNTE FARBRICHTUNGEN IN conv1 — VGG-11 ohne Normalisierung
+==========================================================================
+Quelle            l1      l2      l3    Rang(oM)       Rang je Seed
+rgb            0.518   0.319   0.163        2.52      2.52 +/- 0.05  (n=5)
+lab            0.606   0.228   0.166        2.24      2.24 +/- 0.02  (n=5)
+hsv            0.669   0.259   0.072        1.92      1.92 +/- 0.05  (n=5)
+grayscale      0.853   0.075   0.072        1.36      1.35 +/- 0.01  (n=5)
+
+Achsen des RGB-Netzes (Vorzeichen normiert):
+  Achse 1  [+0.575 +0.631 +0.521]  l=0.518   |cos| zu (1,1,1) = 0.997
+  Achse 2  [+0.783 -0.238 -0.575]  l=0.319   |cos| zu (1,1,1) = 0.017
+  Achse 3  [-0.240 +0.738 -0.631]  l=0.163   |cos| zu (1,1,1) = 0.076
+
+Gepaarte Tests des effektiven Rangs (je Startwert):
+  lab       - rgb       -0.282   p=0.0004   0/5
+  hsv       - rgb       -0.594   p=0.0000   0/5
+  rgb       - grayscale +1.163   p=0.0000   5/5

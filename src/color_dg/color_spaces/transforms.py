@@ -81,6 +81,13 @@ def _build_normalize(colorspace: str, normalization: str):
         return None
     if normalization == "centered":
         return transforms.Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5])
+    if normalization == "uniscale":
+        # Alle Kanaele mit der Streuung des ERSTEN Kanals skalieren (bei CIELAB: L*).
+        # Die Zentrierung bleibt kanalweise, nur die Skalierung wird vereinheitlicht.
+        # Damit ist die Kanalskalierung isoliert von der Zentrierung variiert.
+        stats = CIFAR10_STATS.get(colorspace, CIFAR10_STATS["rgb"])
+        s0 = stats["std"][0]
+        return transforms.Normalize(mean=stats["mean"], std=[s0, s0, s0])
     raise ValueError(f"Unknown normalization: '{normalization}'")
 
 

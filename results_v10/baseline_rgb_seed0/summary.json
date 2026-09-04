@@ -1,0 +1,8 @@
+{
+  "experiment": "baseline_rgb",
+  "model_name": "resnet18",
+  "colorspace": "rgb",
+  "normalization": "uniscale",
+  "seed": 0,
+  "best_val_acc": 0.9265
+}

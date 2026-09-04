@@ -1,5 +1,5 @@
-experiment: exp_lab_uniscale
-colorspace: lab
+experiment: baseline_rgb
+colorspace: rgb
 model:
   name: resnet18
   pretrained: false
@@ -19,5 +19,5 @@ data:
   num_workers: 4
 device: cuda
 seed: 42
-output_dir: results_v8/exp_lab_uni
+output_dir: results_v3/baseline_rgb
 normalization: uniscale

@@ -136,7 +136,7 @@ def main():
     parser.add_argument("--seed",          type=int, default=None,
                         help="Evaluate the <exp>_seed<N> checkpoints instead of <exp>")
     parser.add_argument("--normalization", default="zscore",
-                        choices=["zscore", "minmax", "centered"],
+                        choices=["zscore", "minmax", "centered", "uniscale"],
                         help="Normalization scheme matching how the checkpoint was trained (Phase 5)")
     parser.add_argument("--subdir_suffix", default="",
                         help="Appended to each experiment's checkpoint subdir before _seed<N>, "
