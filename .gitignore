@@ -13,3 +13,7 @@ data/
 
 # Répertoire de travail local (contient les checkpoints)
 /results/
+.claude/
+.vscode/
+.DS_Store
+nohup.out
