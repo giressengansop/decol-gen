@@ -10,3 +10,6 @@ data/
 
 # Répertoire de travail local (contient les checkpoints)
 /results/
+
+# Répertoire de travail local (contient les checkpoints)
+/results/
