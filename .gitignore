@@ -7,3 +7,6 @@ data/
 .ipynb_checkpoints/
 
 *.bak
+
+# Répertoire de travail local (contient les checkpoints)
+/results/
