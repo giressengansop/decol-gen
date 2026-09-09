@@ -1,21 +1,24 @@
+# Datasets (downloaded, not versioned)
+/data/
+
+# Local working directory, superseded by runs/
+/results/
+
+# Model checkpoints
 *.pth
 *.pt
+
+# Python
 __pycache__/
 *.pyc
 *.egg-info/
-data/
 .ipynb_checkpoints/
 
-*.bak
-
-# Répertoire de travail local (contient les checkpoints)
-/results/
-
-# Répertoire de travail local (contient les checkpoints)
-/results/
-.claude/
+# Editors and tooling
 .vscode/
+.claude/
 .DS_Store
+
+# Misc
+*.bak
 nohup.out
-/data
-/results
