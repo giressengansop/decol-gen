@@ -1,8 +1,8 @@
-# Datasets (downloaded, not versioned)
-/data/
+# Datasets (downloaded or symlinked, not versioned)
+/data
 
 # Local working directory, superseded by runs/
-/results/
+/results
 
 # Model checkpoints
 *.pth
