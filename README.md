@@ -275,6 +275,6 @@ above to regenerate them.
 ## Author
 
 Giresse Ngansop — University of Bamberg
-`gnjinkap@uni-bamberg.de`
+`giresse-ginola.ngansop-njinkap@stud.uni-bamberg.de`
 
 Licensed under MIT — see `LICENSE`.
