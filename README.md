@@ -60,55 +60,6 @@ space transformation, a step usually treated as neutral. For robustness, the
 architecture is the more effective lever.
 
 
-![Accuracy difference between CIELAB and RGB, broken down by corruption type](docs/figures/pull-figure.png)
-
-*Averaged over all fifteen corruptions of CIFAR-10-C, CIELAB and RGB are
-indistinguishable. Broken down by corruption type, they differ by up to twelve
-percentage points — CIELAB loses on every noise corruption and gains on every
-blur corruption. The two effects cancel in the mean.*
-
-**Bachelor thesis, University of Bamberg, Chair of Explainable Machine Learning (2026).**
-Full text: [`thesis/2026_Ngansop_Bewertung-alternativer-Farbraeume.pdf`](thesis/2026_Ngansop_Bewertung-alternativer-Farbraeume.pdf)
-(in German, 80 pages).
-
-## Summary
-
-Almost all computer vision models process images in RGB — a choice determined by
-acquisition hardware rather than by the task. Decorrelated colour spaces such as
-CIELAB separate luminance from chrominance by construction, which suggests they
-should make a network more robust to illumination-related corruptions.
-
-This thesis tests that hypothesis. A ResNet-18 is trained from scratch on
-CIFAR-10 in four input representations — RGB, CIELAB, HSV and grayscale — under
-otherwise identical conditions, each replicated across five random seeds, and
-evaluated on CIFAR-10-C.
-
-**The hypothesis is not supported.** CIELAB leads RGB by 0.21 percentage points
-on illumination-related corruptions, a difference that changes sign across seeds
-and is smaller than the spread between two runs of the same condition. The
-grayscale control, by contrast, loses 6.97 points on every seed, confirming that
-the design is sensitive enough to detect a genuine difference.
-
-The aggregate null result nevertheless conceals two opposing effects. Broken
-down by corruption type, CIELAB loses 9.72 points on noise and gains 4.64 on
-blur, consistently across all seeds; the two cancel in the mean. Per-channel
-standardisation is identified as the main cause: scaling all channels by a
-common factor drops the amplitude of the trade-off from 14.35 to 5.67 points.
-
-An eigenvalue analysis of the learned first-layer filters shows why the input
-format matters so little: a network trained on RGB constructs a
-luminance-chrominance decomposition in its first layer by itself, with its
-principal axis at |cos| = 0.994 to the luminance direction. Replacing batch
-normalisation by group normalisation, finally, improves robustness by 6.4 to 6.9
-points for every colour space — roughly ten times the effect of the input
-format. All findings replicate on a second architecture (VGG-11, with and
-without a normalisation layer).
-
-The input colour space therefore changes little about *what* a network learns,
-but a great deal about *how* a corruption appears before the network processes
-it. For robustness, the architecture is the more effective lever.
-
-
 Bachelor's thesis project — University of Bamberg, Chair of Explainable Machine
 Learning. Supervised by Sebastian Dörrich, M.Sc. and Prof. Dr. Christian Ledig.
 
@@ -386,7 +337,6 @@ above to regenerate them.
 Giresse Ngansop — University of Bamberg
 `giresse-ginola.ngansop-njinkap@stud.uni-bamberg.de`
 
-Licensed under MIT — see `LICENSE`.
 
 ## Licence
 
@@ -403,17 +353,3 @@ credit. Suggested attribution and the full terms are in
 of the Chair of Explainable Machine Learning. These belong to their respective
 owners and are not covered by the CC BY licence.
 
-## Licence
-
-| What | Licence |
-|---|---|
-| Source code | [MIT](LICENSE) |
-| Thesis text and figures | [CC BY 4.0](LICENSE-THESIS) |
-
-You may share and adapt the thesis, including commercially, provided you give
-credit. Suggested attribution and the full terms are in
-[`LICENSE-THESIS`](LICENSE-THESIS).
-
-**Exception:** the title page carries the logos of the University of Bamberg and
-of the Chair of Explainable Machine Learning. These belong to their respective
-owners and are not covered by the CC BY licence.
